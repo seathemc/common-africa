@@ -29,9 +29,14 @@
         "pillar": "national",
         "topic": "corporate",
         "barrierId": "one-share-one-vote",
-        "paseClauses": ["multi-class-shares"],
+        "paseClauses": [
+          "multi-class-shares"
+        ],
         "priority": "high",
-        "sourcePages": [62, 387]
+        "sourcePages": [
+          62,
+          387
+        ]
       },
       {
         "id": "tn-csc-94-388",
@@ -42,9 +47,13 @@
         "pillar": "national",
         "topic": "corporate",
         "barrierId": "one-share-one-vote",
-        "paseClauses": ["multi-class-shares"],
+        "paseClauses": [
+          "multi-class-shares"
+        ],
         "priority": "high",
-        "sourcePages": [49]
+        "sourcePages": [
+          49
+        ]
       },
       {
         "id": "tn-fx-code-6",
@@ -57,7 +66,10 @@
         "barrierId": "forex-layering",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [4, 308]
+        "sourcePages": [
+          4,
+          308
+        ]
       },
       {
         "id": "tn-capital-market-decree",
@@ -68,9 +80,13 @@
         "pillar": "national",
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
-        "paseClauses": ["safe"],
+        "paseClauses": [
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [62]
+        "sourcePages": [
+          62
+        ]
       },
       {
         "id": "tn-irpp-38",
@@ -81,9 +97,13 @@
         "pillar": "national",
         "topic": "labor",
         "barrierId": "no-esop-framework",
-        "paseClauses": [],
+        "paseClauses": [
+          "esop"
+        ],
         "priority": "high",
-        "sourcePages": [63]
+        "sourcePages": [
+          63
+        ]
       },
       {
         "id": "tn-labor-30pct",
@@ -96,7 +116,9 @@
         "barrierId": "foreign-worker-quotas",
         "paseClauses": [],
         "priority": "medium",
-        "sourcePages": [49]
+        "sourcePages": [
+          49
+        ]
       },
       {
         "id": "tn-passport-maghreb",
@@ -109,7 +131,10 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "medium",
-        "sourcePages": [6, 73]
+        "sourcePages": [
+          6,
+          73
+        ]
       }
     ]
   },
@@ -144,9 +169,15 @@
         "pillar": "regional",
         "topic": "corporate",
         "barrierId": "ohada-rigidity",
-        "paseClauses": ["multi-class-shares", "safe"],
+        "paseClauses": [
+          "multi-class-shares",
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [58, 350]
+        "sourcePages": [
+          58,
+          350
+        ]
       },
       {
         "id": "sn-startup-act-12",
@@ -157,9 +188,14 @@
         "pillar": "regional",
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
-        "paseClauses": ["safe"],
+        "paseClauses": [
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [50, 60]
+        "sourcePages": [
+          50,
+          60
+        ]
       },
       {
         "id": "sn-labor-l40-l67",
@@ -170,9 +206,13 @@
         "pillar": "national",
         "topic": "labor",
         "barrierId": "no-esop-framework",
-        "paseClauses": [],
+        "paseClauses": [
+          "esop"
+        ],
         "priority": "high",
-        "sourcePages": [50]
+        "sourcePages": [
+          50
+        ]
       },
       {
         "id": "sn-tax-auto-apply",
@@ -185,7 +225,10 @@
         "barrierId": "tax-not-auto-applied",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [5, 308]
+        "sourcePages": [
+          5,
+          308
+        ]
       },
       {
         "id": "sn-bceao-09-2010",
@@ -198,7 +241,9 @@
         "barrierId": "forex-layering",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [60]
+        "sourcePages": [
+          60
+        ]
       },
       {
         "id": "sn-passport-ci",
@@ -211,7 +256,10 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [60, 64]
+        "sourcePages": [
+          60,
+          64
+        ]
       },
       {
         "id": "sn-data-protection",
@@ -224,7 +272,9 @@
         "barrierId": "data-protection-divergence",
         "paseClauses": [],
         "priority": "medium",
-        "sourcePages": [60]
+        "sourcePages": [
+          60
+        ]
       }
     ]
   },
@@ -258,9 +308,14 @@
         "pillar": "national",
         "topic": "corporate",
         "barrierId": "one-share-one-vote",
-        "paseClauses": ["multi-class-shares"],
+        "paseClauses": [
+          "multi-class-shares"
+        ],
         "priority": "high",
-        "sourcePages": [53, 387]
+        "sourcePages": [
+          53,
+          387
+        ]
       },
       {
         "id": "ng-cama-18",
@@ -271,9 +326,13 @@
         "pillar": "national",
         "topic": "corporate",
         "barrierId": "one-share-one-vote",
-        "paseClauses": ["multi-class-shares"],
+        "paseClauses": [
+          "multi-class-shares"
+        ],
         "priority": "medium",
-        "sourcePages": [53]
+        "sourcePages": [
+          53
+        ]
       },
       {
         "id": "ng-sec-rules-2013",
@@ -284,9 +343,13 @@
         "pillar": "national",
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
-        "paseClauses": ["safe"],
+        "paseClauses": [
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [53]
+        "sourcePages": [
+          53
+        ]
       },
       {
         "id": "ng-labor-esop",
@@ -297,9 +360,13 @@
         "pillar": "national",
         "topic": "labor",
         "barrierId": "no-esop-framework",
-        "paseClauses": [],
+        "paseClauses": [
+          "esop"
+        ],
         "priority": "high",
-        "sourcePages": [53]
+        "sourcePages": [
+          53
+        ]
       },
       {
         "id": "ng-cbn-fx-manual-6",
@@ -312,7 +379,10 @@
         "barrierId": "forex-layering",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [53, 287]
+        "sourcePages": [
+          53,
+          287
+        ]
       },
       {
         "id": "ng-schedule-3-auto",
@@ -325,7 +395,9 @@
         "barrierId": "tax-not-auto-applied",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [4]
+        "sourcePages": [
+          4
+        ]
       },
       {
         "id": "ng-notap",
@@ -338,7 +410,9 @@
         "barrierId": "ip-bottlenecks",
         "paseClauses": [],
         "priority": "medium",
-        "sourcePages": [53]
+        "sourcePages": [
+          53
+        ]
       },
       {
         "id": "ng-pencom",
@@ -351,7 +425,9 @@
         "barrierId": "pension-fund-restrictions",
         "paseClauses": [],
         "priority": "medium",
-        "sourcePages": [11]
+        "sourcePages": [
+          11
+        ]
       },
       {
         "id": "ng-ecowas-passport",
@@ -364,7 +440,10 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [60, 64]
+        "sourcePages": [
+          60,
+          64
+        ]
       }
     ]
   },
@@ -397,9 +476,15 @@
         "pillar": "regional",
         "topic": "corporate",
         "barrierId": "ohada-rigidity",
-        "paseClauses": ["multi-class-shares", "safe"],
+        "paseClauses": [
+          "multi-class-shares",
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [52, 58]
+        "sourcePages": [
+          52,
+          58
+        ]
       },
       {
         "id": "cd-labor-40-67",
@@ -410,9 +495,13 @@
         "pillar": "national",
         "topic": "labor",
         "barrierId": "no-esop-framework",
-        "paseClauses": [],
+        "paseClauses": [
+          "esop"
+        ],
         "priority": "high",
-        "sourcePages": [52]
+        "sourcePages": [
+          52
+        ]
       },
       {
         "id": "cd-fx-70",
@@ -425,7 +514,9 @@
         "barrierId": "forex-layering",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [52]
+        "sourcePages": [
+          52
+        ]
       },
       {
         "id": "cd-eac-passport",
@@ -438,7 +529,10 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [52, 64]
+        "sourcePages": [
+          52,
+          64
+        ]
       },
       {
         "id": "cd-cnpe-activation",
@@ -451,7 +545,9 @@
         "barrierId": "agency-fragmentation",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [52]
+        "sourcePages": [
+          52
+        ]
       },
       {
         "id": "cd-tax-34-38",
@@ -464,7 +560,9 @@
         "barrierId": "tax-not-auto-applied",
         "paseClauses": [],
         "priority": "medium",
-        "sourcePages": [52]
+        "sourcePages": [
+          52
+        ]
       }
     ]
   },
@@ -497,9 +595,15 @@
         "pillar": "regional",
         "topic": "corporate",
         "barrierId": "ohada-rigidity",
-        "paseClauses": ["multi-class-shares", "safe"],
+        "paseClauses": [
+          "multi-class-shares",
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [54, 58]
+        "sourcePages": [
+          54,
+          58
+        ]
       },
       {
         "id": "ci-syscohada-annex-b",
@@ -510,9 +614,14 @@
         "pillar": "regional",
         "topic": "accounting",
         "barrierId": "no-esop-framework",
-        "paseClauses": [],
+        "paseClauses": [
+          "esop"
+        ],
         "priority": "high",
-        "sourcePages": [54, 58]
+        "sourcePages": [
+          54,
+          58
+        ]
       },
       {
         "id": "ci-cgi-15",
@@ -525,7 +634,9 @@
         "barrierId": "tax-not-auto-applied",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [54]
+        "sourcePages": [
+          54
+        ]
       },
       {
         "id": "ci-uemoa-fx",
@@ -538,7 +649,10 @@
         "barrierId": "forex-layering",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [54, 60]
+        "sourcePages": [
+          54,
+          60
+        ]
       },
       {
         "id": "ci-passport-sn",
@@ -551,7 +665,10 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [54, 60]
+        "sourcePages": [
+          54,
+          60
+        ]
       },
       {
         "id": "ci-ecowas-data",
@@ -564,7 +681,9 @@
         "barrierId": "data-protection-divergence",
         "paseClauses": [],
         "priority": "medium",
-        "sourcePages": [60]
+        "sourcePages": [
+          60
+        ]
       }
     ]
   },
@@ -597,9 +716,13 @@
         "pillar": "national",
         "topic": "corporate",
         "barrierId": "one-share-one-vote",
-        "paseClauses": ["multi-class-shares"],
+        "paseClauses": [
+          "multi-class-shares"
+        ],
         "priority": "high",
-        "sourcePages": [55]
+        "sourcePages": [
+          55
+        ]
       },
       {
         "id": "et-securities-safe",
@@ -610,9 +733,13 @@
         "pillar": "national",
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
-        "paseClauses": ["safe"],
+        "paseClauses": [
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [55]
+        "sourcePages": [
+          55
+        ]
       },
       {
         "id": "et-labor-esop",
@@ -623,9 +750,13 @@
         "pillar": "national",
         "topic": "labor",
         "barrierId": "no-esop-framework",
-        "paseClauses": [],
+        "paseClauses": [
+          "esop"
+        ],
         "priority": "high",
-        "sourcePages": [55]
+        "sourcePages": [
+          55
+        ]
       },
       {
         "id": "et-nbe-forex",
@@ -638,7 +769,9 @@
         "barrierId": "forex-layering",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [55]
+        "sourcePages": [
+          55
+        ]
       },
       {
         "id": "et-comesa-passport",
@@ -651,7 +784,9 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "medium",
-        "sourcePages": [55]
+        "sourcePages": [
+          55
+        ]
       },
       {
         "id": "et-implementation-regs",
@@ -662,9 +797,14 @@
         "pillar": "national",
         "topic": "implementation",
         "barrierId": "agency-fragmentation",
-        "paseClauses": ["multi-class-shares", "safe"],
+        "paseClauses": [
+          "multi-class-shares",
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [55]
+        "sourcePages": [
+          55
+        ]
       }
     ]
   },
@@ -698,7 +838,9 @@
         "barrierId": "forex-layering",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "dz-securities-safe",
@@ -709,9 +851,13 @@
         "pillar": "national",
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
-        "paseClauses": ["safe"],
+        "paseClauses": [
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       }
     ]
   },
@@ -745,7 +891,10 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [61, 64]
+        "sourcePages": [
+          61,
+          64
+        ]
       },
       {
         "id": "ke-sept-harmonisation",
@@ -758,7 +907,9 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [12]
+        "sourcePages": [
+          12
+        ]
       },
       {
         "id": "ke-cma-convertibles",
@@ -769,9 +920,13 @@
         "pillar": "national",
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
-        "paseClauses": ["safe"],
+        "paseClauses": [
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "ke-companies-act-multiclass",
@@ -782,9 +937,13 @@
         "pillar": "national",
         "topic": "corporate",
         "barrierId": "one-share-one-vote",
-        "paseClauses": ["multi-class-shares"],
+        "paseClauses": [
+          "multi-class-shares"
+        ],
         "priority": "medium",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       }
     ]
   },
@@ -816,9 +975,13 @@
         "pillar": "national",
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
-        "paseClauses": ["safe"],
+        "paseClauses": [
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "gh-pension-5pct",
@@ -831,7 +994,9 @@
         "barrierId": "pension-fund-restrictions",
         "paseClauses": [],
         "priority": "medium",
-        "sourcePages": [11]
+        "sourcePages": [
+          11
+        ]
       },
       {
         "id": "gh-passport-extension",
@@ -844,7 +1009,10 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [9, 73]
+        "sourcePages": [
+          9,
+          73
+        ]
       }
     ]
   },
@@ -878,7 +1046,9 @@
         "barrierId": "forex-layering",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "ma-securities-safe",
@@ -889,9 +1059,13 @@
         "pillar": "national",
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
-        "paseClauses": ["safe"],
+        "paseClauses": [
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "ma-passport-tn",
@@ -904,7 +1078,9 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "medium",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       }
     ]
   },
@@ -938,7 +1114,9 @@
         "barrierId": "agency-fragmentation",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "rw-company-law-multiclass",
@@ -949,9 +1127,13 @@
         "pillar": "national",
         "topic": "corporate",
         "barrierId": "one-share-one-vote",
-        "paseClauses": ["multi-class-shares"],
+        "paseClauses": [
+          "multi-class-shares"
+        ],
         "priority": "medium",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "rw-eac-passport",
@@ -964,7 +1146,10 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [9, 64]
+        "sourcePages": [
+          9,
+          64
+        ]
       }
     ]
   },
@@ -999,7 +1184,9 @@
         "barrierId": "pension-fund-restrictions",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "za-sarb-offshore-ip",
@@ -1012,7 +1199,9 @@
         "barrierId": "forex-layering",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "za-companies-act-multiclass",
@@ -1023,9 +1212,13 @@
         "pillar": "national",
         "topic": "corporate",
         "barrierId": "one-share-one-vote",
-        "paseClauses": ["multi-class-shares"],
+        "paseClauses": [
+          "multi-class-shares"
+        ],
         "priority": "low",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       }
     ]
   },
@@ -1059,7 +1252,9 @@
         "barrierId": "no-mutual-recognition",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "ug-cma-convertibles",
@@ -1070,9 +1265,13 @@
         "pillar": "national",
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
-        "paseClauses": ["safe"],
+        "paseClauses": [
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       }
     ]
   },
@@ -1105,9 +1304,13 @@
         "pillar": "national",
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
-        "paseClauses": ["safe"],
+        "paseClauses": [
+          "safe"
+        ],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "eg-forex-repatriation",
@@ -1120,7 +1323,9 @@
         "barrierId": "forex-layering",
         "paseClauses": [],
         "priority": "high",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       },
       {
         "id": "eg-companies-law-multiclass",
@@ -1131,9 +1336,13 @@
         "pillar": "national",
         "topic": "corporate",
         "barrierId": "one-share-one-vote",
-        "paseClauses": ["multi-class-shares"],
+        "paseClauses": [
+          "multi-class-shares"
+        ],
         "priority": "medium",
-        "sourcePages": [73]
+        "sourcePages": [
+          73
+        ]
       }
     ]
   }

@@ -25,7 +25,7 @@
     "category": "labor",
     "description": "Labor and tax codes across all 6 enacted-act countries either prohibit or fail to support employee stock-option plans with tax obligations deferred to liquidity. Tunisia's IRPP Article 38 taxes equity grants as immediate wages on theoretical values; Nigeria's Labor Act has no equity-comp provisions; OHADA states lack ESOP treatment in SYSCOHADA accounting. The result: African startups can't compete with offshore-domiciled peers for senior talent.",
     "affectedCountries": ["TN", "NG", "SN", "CI", "CD", "ET"],
-    "paseClauses": [],
+    "paseClauses": ["esop"],
     "surgicalFix": "Amend the labor and personal-income-tax codes to defer taxation of equity grants in labelled startups until a liquidity event (sale, IPO, or secondary). Add standardised vesting and cliff provisions to companies legislation.",
     "sourcePages": [63, 390]
   },
