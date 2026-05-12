@@ -15,7 +15,7 @@
     "category": "securities",
     "description": "Securities frameworks across most enacted-act countries either classify SAFEs and convertible notes as debt (Nigeria SEC Rules 2013, Tunisia BCT Feb-2020 memo) or fail to recognise them at all (OHADA AUSCGIE, Ethiopia Securities Proclamation). This forces early-stage rounds offshore and distorts accounting and tax treatment.",
     "affectedCountries": ["TN", "NG", "SN", "CI", "CD", "ET", "MA", "EG"],
-    "paseClauses": ["safe"],
+    "paseClauses": ["safe", "convertible-note"],
     "surgicalFix": "Amend the relevant securities statute or regulator instruction to recognise SAFEs and convertible notes as valid equity-linked securities when issued by a labelled startup; treat them as equity for accounting, tax, and prudential purposes.",
     "sourcePages": [62, 309]
   },

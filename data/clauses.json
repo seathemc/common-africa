@@ -35,6 +35,26 @@
     ]
   },
   {
+    "slug": "convertible-note",
+    "title": "Convertible Note",
+    "category": "Financing",
+    "summary": "A standardised convertible debt instrument that converts to equity on a qualified financing, change of control, or maturity. Pairs with the SAFE clause as the second early-stage financing primitive — easier to issue in OHADA jurisdictions (AUSCGIE Articles 822-839 provide a mature OCA framework) and in jurisdictions where the SAFE's hybrid classification is contested.",
+    "addresses": [
+      "Tunisia BCT memo Feb 2020 (classifies SAFEs as debt; OCA is debt by nature, escaping the classification ambiguity)",
+      "Nigeria SEC Rules 2013 (treats SAFEs as debt; convertible notes fit cleanly within CAMA debenture framework)",
+      "BCEAO Instruction 2012-09 (recognises debt and equity only; OCA recognised as debt)",
+      "Senegal Loi n° 2020-01 Article 12 (mentions titres convertibles but lacks OHADA integration)",
+      "Ghana Securities Industry Act 2016 (Section 109 — debentures expressly permitted)",
+      "South Africa Companies Act 71/2008 Section 43 (debt issuance framework)",
+      "Tunisia Code des Sociétés Commerciales Articles 332-355 (mature obligations convertibles framework)"
+    ],
+    "barrierIds": ["safe-convertible-non-recognition"],
+    "versions": [
+      { "tradition": "common-law", "file": "convertible-note.common-law.md", "label": "Common-law (Nigeria anchor; Kenya, Ghana, South Africa parallel)" },
+      { "tradition": "ohada", "file": "convertible-note.ohada.md", "label": "OHADA / civil-law (Senegal anchor; Ivory Coast, DRC, Tunisia parallel)" }
+    ]
+  },
+  {
     "slug": "esop",
     "title": "Employee Stock Option Plan (ESOP)",
     "category": "Employee equity",

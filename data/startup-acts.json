@@ -81,7 +81,8 @@
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
         "paseClauses": [
-          "safe"
+          "safe",
+          "convertible-note"
         ],
         "priority": "high",
         "sourcePages": [
@@ -189,7 +190,8 @@
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
         "paseClauses": [
-          "safe"
+          "safe",
+          "convertible-note"
         ],
         "priority": "high",
         "sourcePages": [
@@ -344,7 +346,8 @@
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
         "paseClauses": [
-          "safe"
+          "safe",
+          "convertible-note"
         ],
         "priority": "high",
         "sourcePages": [
@@ -734,7 +737,8 @@
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
         "paseClauses": [
-          "safe"
+          "safe",
+          "convertible-note"
         ],
         "priority": "high",
         "sourcePages": [
@@ -852,7 +856,8 @@
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
         "paseClauses": [
-          "safe"
+          "safe",
+          "convertible-note"
         ],
         "priority": "high",
         "sourcePages": [
@@ -921,7 +926,8 @@
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
         "paseClauses": [
-          "safe"
+          "safe",
+          "convertible-note"
         ],
         "priority": "high",
         "sourcePages": [
@@ -976,7 +982,8 @@
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
         "paseClauses": [
-          "safe"
+          "safe",
+          "convertible-note"
         ],
         "priority": "high",
         "sourcePages": [
@@ -1060,7 +1067,8 @@
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
         "paseClauses": [
-          "safe"
+          "safe",
+          "convertible-note"
         ],
         "priority": "high",
         "sourcePages": [
@@ -1266,7 +1274,8 @@
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
         "paseClauses": [
-          "safe"
+          "safe",
+          "convertible-note"
         ],
         "priority": "high",
         "sourcePages": [
@@ -1305,7 +1314,8 @@
         "topic": "securities",
         "barrierId": "safe-convertible-non-recognition",
         "paseClauses": [
-          "safe"
+          "safe",
+          "convertible-note"
         ],
         "priority": "high",
         "sourcePages": [
