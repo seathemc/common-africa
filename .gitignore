@@ -7,3 +7,10 @@ out
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+
+# Lockfile intentionally not tracked — this repo gets touched from
+# both macOS and Linux sandboxes; cross-platform optional-dependency
+# resolution (lightningcss native binaries) breaks when a Linux-generated
+# lockfile is applied on macOS. Each environment generates its own.
+# Vercel will produce one at build time.
+package-lock.json
