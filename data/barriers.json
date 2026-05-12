@@ -1,0 +1,122 @@
+[
+  {
+    "id": "one-share-one-vote",
+    "title": "One-share-one-vote default in companies legislation",
+    "category": "corporate",
+    "description": "National companies legislation enforces one-share-one-vote as the default for private companies, blocking multi-class share structures with differentiated voting, dividend, or liquidation rights. Founders are forced to incorporate parent companies in Delaware, Mauritius, or Singapore to access standard venture governance.",
+    "affectedCountries": ["TN", "NG", "ET", "SN", "CI", "CD", "MA", "EG"],
+    "paseClauses": ["multi-class-shares"],
+    "surgicalFix": "Insert an exemption permitting labelled startups to issue multi-class share structures with appropriate disclosure, leaving the default rule intact for non-labelled companies.",
+    "sourcePages": [53, 62, 387]
+  },
+  {
+    "id": "safe-convertible-non-recognition",
+    "title": "SAFEs and convertible notes not recognised as securities",
+    "category": "securities",
+    "description": "Securities frameworks across most enacted-act countries either classify SAFEs and convertible notes as debt (Nigeria SEC Rules 2013, Tunisia BCT Feb-2020 memo) or fail to recognise them at all (OHADA AUSCGIE, Ethiopia Securities Proclamation). This forces early-stage rounds offshore and distorts accounting and tax treatment.",
+    "affectedCountries": ["TN", "NG", "SN", "CI", "CD", "ET", "MA", "EG"],
+    "paseClauses": ["safe", "convertible-note"],
+    "surgicalFix": "Amend the relevant securities statute or regulator instruction to recognise SAFEs and convertible notes as valid equity-linked securities when issued by a labelled startup; treat them as equity for accounting, tax, and prudential purposes.",
+    "sourcePages": [62, 309]
+  },
+  {
+    "id": "no-esop-framework",
+    "title": "No standardised ESOP / equity-compensation framework",
+    "category": "labor",
+    "description": "Labor and tax codes across all 6 enacted-act countries either prohibit or fail to support employee stock-option plans with tax obligations deferred to liquidity. Tunisia's IRPP Article 38 taxes equity grants as immediate wages on theoretical values; Nigeria's Labor Act has no equity-comp provisions; OHADA states lack ESOP treatment in SYSCOHADA accounting. The result: African startups can't compete with offshore-domiciled peers for senior talent.",
+    "affectedCountries": ["TN", "NG", "SN", "CI", "CD", "ET"],
+    "paseClauses": ["esop"],
+    "surgicalFix": "Amend the labor and personal-income-tax codes to defer taxation of equity grants in labelled startups until a liquidity event (sale, IPO, or secondary). Add standardised vesting and cliff provisions to companies legislation.",
+    "sourcePages": [63, 390]
+  },
+  {
+    "id": "forex-layering",
+    "title": "Forex authorisation layered on top of Startup Act forex grants",
+    "category": "forex",
+    "description": "Startup acts grant labelled companies the right to operate foreign-currency accounts (Tunisia Article 17, Nigeria forex provisions, DRC Article 32), but underlying foreign-exchange codes still require central-bank authorisation for the same accounts (Tunisia FX Code Article 6, CBN FX Manual Section 6, DRC FX Regulations Article 70, BCEAO 09/2010). The Startup Act grant becomes a paper right.",
+    "affectedCountries": ["TN", "NG", "SN", "CI", "CD", "ET", "DZ", "MA", "EG"],
+    "paseClauses": [],
+    "surgicalFix": "Amend the foreign-exchange code or regulator manual to auto-recognise the Startup Act forex grant. For digital-service exports, replace daily/30-day repatriation requirements with quarterly reporting.",
+    "sourcePages": [4, 308]
+  },
+  {
+    "id": "tax-not-auto-applied",
+    "title": "Tax benefits require separate verification after labelling",
+    "category": "tax",
+    "description": "All 6 enacted-act countries promise tax holidays, but none apply them automatically on labelling. Senegal requires separate DGID verification (45-60 days vs the 30-day statutory limit). Nigeria's Schedule 3 incentives aren't integrated into the federal tax system. Tunisia, Ivory Coast, and DRC have similar gaps. Founders wait months for benefits they're already legally entitled to.",
+    "affectedCountries": ["TN", "NG", "SN", "CI", "CD", "ET"],
+    "paseClauses": [],
+    "surgicalFix": "Amend the relevant tax code to include a single clause: 'Tax benefits under [the Startup Act] shall apply automatically from the date of label issuance without requiring separate application or verification by [the tax authority].' Build API integration between the labelling portal and the tax authority.",
+    "sourcePages": [4, 308]
+  },
+  {
+    "id": "no-mutual-recognition",
+    "title": "No mutual recognition of startup labels across borders",
+    "category": "regional",
+    "description": "Despite shared REC membership, no enacted startup act recognises another country's labelling. A company labelled in Senegal must reapply in Ivory Coast despite both being ECOWAS, OHADA, and UEMOA members with nearly identical qualification criteria. Wave expanding Senegal → Ivory Coast restarts the regulatory process entirely. The Ghana–Rwanda Fintech Passport (Feb 2025) is the only operational counter-example.",
+    "affectedCountries": ["TN", "NG", "SN", "CI", "CD", "ET", "DZ", "KE", "GH", "MA", "RW", "ZA", "UG", "EG"],
+    "paseClauses": [],
+    "surgicalFix": "Bilateral mutual-recognition agreement under existing REC treaty powers (ECOWAS Article 59 + Protocol on Trade in Services 2019; EAC Common Market Protocol Articles 13-14; OHADA harmonisation; AMU equivalents). Sector-first pilots — fintech, e-commerce, logistics — before economy-wide.",
+    "sourcePages": [6, 64, 281]
+  },
+  {
+    "id": "ohada-rigidity",
+    "title": "OHADA AUSCGIE rigidity blocks startup-friendly corporate forms",
+    "category": "corporate",
+    "description": "OHADA's Uniform Act on Commercial Companies (AUSCGIE) limits OHADA-state companies to SARL, SA, and SAS forms (Article 6), with Articles 309-314 imposing fixed capital and governance requirements. Article 39 establishes a default one-share-one-vote rule. Articles 233-246 of the Uniform Act on Secured Transactions don't recognise SAFEs or convertible notes. National startup acts within OHADA cannot unilaterally fix any of this — it requires regional consensus across all 17 member states.",
+    "affectedCountries": ["SN", "CI", "CD"],
+    "paseClauses": ["multi-class-shares", "safe"],
+    "surgicalFix": "Amend OHADA AUSCGIE Articles 5 and 309-314 to create a Société Panafricaine d'Innovation (SAS-I) — a modular vehicle with multi-class shares, flexible governance, and standardised convertible-instrument recognition. This is a regional, not national, intervention.",
+    "sourcePages": [58, 350]
+  },
+  {
+    "id": "foreign-worker-quotas",
+    "title": "Foreign-worker quotas constrain technical talent",
+    "category": "labor",
+    "description": "Tunisia's labor law caps foreign personnel at 30%, reverting to 10% after three years. Senegal imposes a 20% quota. Both conflict with the talent strategy of digital ventures recruiting AI engineers, ML specialists, and senior product talent who are scarce locally.",
+    "affectedCountries": ["TN", "SN"],
+    "paseClauses": [],
+    "surgicalFix": "Amend the labor code to raise the cap to 50% for labelled startups, with sunset clauses tied to local-talent training commitments. Recognise non-resident technical specialists under remote-work arrangements.",
+    "sourcePages": [318]
+  },
+  {
+    "id": "agency-fragmentation",
+    "title": "Government agencies operate without integration",
+    "category": "implementation",
+    "description": "Startup labelling, tax administration, corporate registry, and central-bank verification operate on disconnected systems. Tunisia's portal is fully operational but isolated; Nigeria's NCDIE doesn't share data with FIRS or CAC; Senegal's DER/FJ, DGID, and Customs require separate submissions; DRC's CNPE digital portal is still in development. Founders submit the same information 4-6 times.",
+    "affectedCountries": ["TN", "NG", "SN", "CI", "CD", "ET"],
+    "paseClauses": [],
+    "surgicalFix": "Deploy API connections between labelling portal, tax authority, corporate registry, and central bank. Single-submission model: the startup files once with the labelling portal; downstream systems consume the data automatically.",
+    "sourcePages": [4, 308]
+  },
+  {
+    "id": "ip-bottlenecks",
+    "title": "Patent and tech-transfer processing creates multi-month delays",
+    "category": "ip",
+    "description": "Tunisia's INNORPI takes 24 months for patent support despite Startup Act Article 12 promising expedited processing. Nigeria's NOTAP adds 2-6 months to technology-transfer arrangements. These delays are particularly painful for AI and biotech ventures racing competitors.",
+    "affectedCountries": ["TN", "NG"],
+    "paseClauses": [],
+    "surgicalFix": "Exempt labelled startups from standard NOTAP review for intra-group IP licensing. Mandate expedited patent processing (under 6 months) for labelled startups, backed by a service-level commitment.",
+    "sourcePages": [318]
+  },
+  {
+    "id": "data-protection-divergence",
+    "title": "Data-protection frameworks diverge across borders",
+    "category": "data",
+    "description": "ECOWAS adopted a binding Supplementary Act on Personal Data Protection (2010), but national implementation is uneven. Senegal's law misaligns with the Supplementary Act; Nigeria's NDPR and Ghana's DPA have different consent and breach-notification rules. Platform startups operating across borders maintain contradictory compliance systems.",
+    "affectedCountries": ["SN", "NG", "CI", "GH", "KE", "UG"],
+    "paseClauses": [],
+    "surgicalFix": "Bring national data-protection laws into alignment with the ECOWAS Supplementary Act (in West Africa) and the EAC Data Protection Bill (in East Africa). Mutual recognition of data-adequacy determinations between RECs.",
+    "sourcePages": [60, 281]
+  },
+  {
+    "id": "pension-fund-restrictions",
+    "title": "Pension funds restricted from investing in startups",
+    "category": "capital",
+    "description": "Despite 35% of African startup investors now being Africa-based, pension funds remain largely unable to invest in startups due to regulatory restrictions on alternative assets. Ghana mandates pension funds allocate 5% to startups by 2026 — outpacing Ghana's own startup act. Nigeria's PenCom rules and Senegal's equivalent constrain institutional capital flow.",
+    "affectedCountries": ["NG", "SN", "KE", "GH", "ZA"],
+    "paseClauses": [],
+    "surgicalFix": "Amend pension-fund regulations to permit allocations to licensed startup funds (not direct startup equity) with prudential guardrails. Ghana's 5%-by-2026 mandate is the template.",
+    "sourcePages": [11]
+  }
+]
