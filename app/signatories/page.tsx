@@ -3,7 +3,12 @@ import { prisma } from "@/lib/prisma";
 
 export const revalidate = 60;
 
-export default async function SignatoriesPage() {
+export default async function SignatoriesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ verify?: string }>;
+}) {
+  const { verify } = await searchParams;
   let signatories: Array<{
     id: string;
     name: string;
@@ -15,8 +20,8 @@ export default async function SignatoriesPage() {
   let dbAvailable = true;
   try {
     signatories = await prisma.signatory.findMany({
-      where: { showPublicly: true },
-      orderBy: { createdAt: "desc" },
+      where: { showPublicly: true, verified: true },
+      orderBy: { verifiedAt: "desc" },
       select: { id: true, name: true, role: true, organization: true, country: true, message: true },
     });
   } catch {
@@ -24,13 +29,18 @@ export default async function SignatoriesPage() {
   }
 
   return (
-    <section className="container-wide py-20">
+    <section className="mx-auto max-w-5xl px-6 py-20">
+      {verify === "ok" && (
+        <div className="mb-10 border-l-2 border-primary pl-4 text-sm">
+          Email verified — your signature is now on the wall.
+        </div>
+      )}
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h1 className="text-3xl md:text-4xl tracking-tight">Signatories</h1>
-          <p className="mt-2 text-[color:var(--muted)]">
+          <p className="mt-2 text-muted-foreground">
             {dbAvailable
-              ? `${signatories.length.toLocaleString()} people have signed.`
+              ? `${signatories.length.toLocaleString()} verified ${signatories.length === 1 ? "signature" : "signatures"}.`
               : "Database not connected — signatory wall will populate once configured."}
           </p>
         </div>
@@ -43,7 +53,7 @@ export default async function SignatoriesPage() {
       </div>
 
       {dbAvailable && signatories.length === 0 && (
-        <p className="mt-16 text-[color:var(--muted)]">
+        <p className="mt-16 text-muted-foreground">
           No public signatories yet. Be the first.
         </p>
       )}
@@ -51,9 +61,9 @@ export default async function SignatoriesPage() {
       {dbAvailable && signatories.length > 0 && (
         <ul className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {signatories.map((s) => (
-            <li key={s.id} className="border hairline p-5">
+            <li key={s.id} className="border p-5">
               <div className="font-medium">{s.name}</div>
-              <div className="text-sm text-[color:var(--muted)] mt-0.5">
+              <div className="text-sm text-muted-foreground mt-0.5">
                 {[s.role, s.organization, s.country].filter(Boolean).join(" · ")}
               </div>
               {s.message && (

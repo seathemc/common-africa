@@ -7,3 +7,9 @@ out
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+
+# We use pnpm (specified via `packageManager` field in package.json).
+# npm lockfiles cause cross-platform optional-dependency resolution bugs
+# with native binaries like lightningcss — keep them out.
+package-lock.json
+yarn.lock
