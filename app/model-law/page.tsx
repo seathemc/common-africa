@@ -4,8 +4,8 @@ export const metadata = { title: "AU Model Law on Startup Promotion — Common" 
 
 export default function ModelLawPage() {
   return (
-    <section className="container-prose py-20">
-      <div className="text-xs uppercase tracking-widest text-[color:var(--brand)]">
+    <section className="mx-auto max-w-3xl px-6 py-20">
+      <div className="text-xs uppercase tracking-widest text-foreground">
         Continental layer
       </div>
       <h1 className="mt-2 text-3xl md:text-5xl tracking-tight">
@@ -18,7 +18,7 @@ export default function ModelLawPage() {
         specifications that turn it into infrastructure.
       </p>
 
-      <div className="mt-10 p-5 border hairline text-sm leading-relaxed">
+      <div className="mt-10 p-5 border text-sm leading-relaxed">
         <strong>v0 — proposal in draft.</strong> This page will become the annotated reference
         implementation. Track progress on{" "}
         <a href="https://github.com/seathemc/common-africa">GitHub</a> or{" "}
@@ -59,7 +59,7 @@ export default function ModelLawPage() {
         ready-made compatibility surface, and every founder gets a stack that travels.
       </p>
 
-      <div className="mt-16 border-t hairline pt-10">
+      <div className="mt-16 border-t pt-10">
         <Link href="/" className="text-sm">← Back to the manifesto</Link>
       </div>
     </section>

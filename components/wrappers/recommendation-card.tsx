@@ -13,7 +13,7 @@ export function RecommendationCard({
   showPillar?: boolean;
 }) {
   return (
-    <Card className="font-ui">
+    <Card>
       <CardHeader>
         <div className="flex flex-wrap items-center gap-2 text-xs">
           {showPillar && <PillarBadge pillar={rec.pillar} />}
@@ -44,7 +44,7 @@ export function RecommendationCard({
             {rec.barrierId && (
               <Link
                 href={`/topics/${rec.barrierId}`}
-                className="no-underline rounded-full border hairline px-3 py-1 hover:bg-foreground hover:text-background transition-colors"
+                className="no-underline rounded-full border px-3 py-1 hover:bg-foreground hover:text-background transition-colors"
               >
                 Topic · {rec.barrierId.replace(/-/g, " ")}
               </Link>
@@ -53,7 +53,7 @@ export function RecommendationCard({
               <Link
                 key={slug}
                 href={`/entity/${slug}`}
-                className="no-underline rounded-full border hairline px-3 py-1 hover:bg-foreground hover:text-background transition-colors"
+                className="no-underline rounded-full border px-3 py-1 hover:bg-foreground hover:text-background transition-colors"
               >
                 PASE · {slug.replace(/-/g, " ")}
               </Link>

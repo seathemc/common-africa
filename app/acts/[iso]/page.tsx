@@ -32,14 +32,14 @@ export default async function ActDetailPage({
   const defaultTab = pillarOrder.find((p) => grouped[p].length > 0) ?? "national";
 
   return (
-    <div className="container-wide py-12 font-ui">
+    <div className="mx-auto max-w-5xl px-6 py-12">
       <Link href="/acts" className="text-sm text-muted-foreground">
         ← All acts
       </Link>
 
       <header className="mt-6 flex flex-wrap items-start justify-between gap-6">
         <div>
-          <h1 className="font-body text-4xl md:text-5xl tracking-tight">{act.country}</h1>
+          <h1 className="text-4xl md:text-5xl tracking-tight">{act.country}</h1>
           <p className="mt-2 text-muted-foreground">
             {act.actName} · {act.region} · {act.rec}
           </p>
@@ -95,7 +95,7 @@ export default async function ActDetailPage({
 
       <section className="mt-16">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
-          <h2 className="font-body text-2xl tracking-tight">
+          <h2 className="text-2xl tracking-tight">
             What Common proposes for {act.country}
           </h2>
           <span className="text-sm text-muted-foreground">

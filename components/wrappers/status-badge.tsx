@@ -17,7 +17,7 @@ export function StatusBadge({
       <Badge
         variant="outline"
         className={cn(
-          "border-[color:var(--brand)]/40 text-[color:var(--brand)] font-ui",
+          "border-primary/40 text-foreground",
           className,
         )}
       >
@@ -26,7 +26,7 @@ export function StatusBadge({
     );
   }
   return (
-    <Badge variant="outline" className={cn("text-muted-foreground font-ui", className)}>
+    <Badge variant="outline" className={cn("text-muted-foreground", className)}>
       In development
     </Badge>
   );

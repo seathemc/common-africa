@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 type Priority = "high" | "medium" | "low";
 
 const STYLES: Record<Priority, string> = {
-  high: "border-[color:var(--brand)]/40 bg-[color:var(--brand)]/5 text-[color:var(--brand)]",
+  high: "border-primary/40 bg-primary/5 text-foreground font-medium",
   medium: "",
   low: "text-muted-foreground",
 };
@@ -17,7 +17,7 @@ export function PriorityBadge({
   className?: string;
 }) {
   return (
-    <Badge variant="outline" className={cn(STYLES[priority], "font-ui", className)}>
+    <Badge variant="outline" className={cn(STYLES[priority], className)}>
       {priority} priority
     </Badge>
   );

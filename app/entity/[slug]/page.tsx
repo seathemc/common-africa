@@ -32,16 +32,16 @@ export default async function ClausePage({
     clause.versions[0].tradition;
 
   return (
-    <div className="container-wide py-12 font-ui">
+    <div className="mx-auto max-w-5xl px-6 py-12">
       <Link href="/entity" className="text-sm text-muted-foreground">
         ← Clause library
       </Link>
 
       <header className="mt-6 max-w-3xl">
-        <div className="text-xs uppercase tracking-widest text-[color:var(--brand)]">
+        <div className="text-xs uppercase tracking-widest text-foreground">
           {clause.category}
         </div>
-        <h1 className="mt-2 font-body text-3xl md:text-4xl tracking-tight">{clause.title}</h1>
+        <h1 className="mt-2 text-3xl md:text-4xl tracking-tight">{clause.title}</h1>
         <p className="mt-4 text-muted-foreground leading-relaxed">{clause.summary}</p>
       </header>
 
@@ -76,7 +76,7 @@ export default async function ClausePage({
           return (
             <TabsContent key={v.tradition} value={v.tradition} className="mt-6">
               <article
-                className="font-body prose prose-neutral max-w-none"
+                className="prose prose-neutral max-w-none"
                 dangerouslySetInnerHTML={{ __html: html }}
               />
             </TabsContent>

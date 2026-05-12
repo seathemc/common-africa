@@ -41,7 +41,7 @@ export default function SignPage() {
 
   if (status === "ok") {
     return (
-      <section className="container-prose py-24 text-center">
+      <section className="mx-auto max-w-3xl px-6 py-24 text-center">
         <h1 className="text-3xl tracking-tight">Check your inbox.</h1>
         <p className="mt-4 text-muted-foreground leading-relaxed">
           We sent you a confirmation link. Click it to verify your email — your
@@ -55,7 +55,7 @@ export default function SignPage() {
   }
 
   return (
-    <section className="container-prose py-20">
+    <section className="mx-auto max-w-3xl px-6 py-20">
       <h1 className="text-3xl md:text-4xl tracking-tight">Sign the manifesto.</h1>
       <p className="mt-4 text-muted-foreground leading-relaxed">
         Add your name to the call for an integrated legal architecture for Africa's startup economy:
@@ -94,7 +94,7 @@ export default function SignPage() {
           >
             {status === "submitting" ? "Signing…" : "Sign"}
           </button>
-          {error && <span className="text-sm text-[color:var(--brand)]">{error}</span>}
+          {error && <span className="text-sm text-foreground">{error}</span>}
         </div>
       </form>
     </section>
@@ -118,13 +118,13 @@ function Field({
 }) {
   return (
     <label className="grid gap-2">
-      <span className="text-sm">{label}{required && <span className="text-[color:var(--brand)]"> *</span>}</span>
+      <span className="text-sm">{label}{required && <span className="text-foreground"> *</span>}</span>
       {textarea ? (
         <textarea
           name={name}
           rows={2}
           placeholder={placeholder}
-          className="border hairline bg-transparent px-3 py-2 outline-none focus:border-foreground"
+          className="border bg-transparent px-3 py-2 outline-none focus:border-foreground"
         />
       ) : (
         <input
@@ -132,7 +132,7 @@ function Field({
           type={type}
           required={required}
           placeholder={placeholder}
-          className="border hairline bg-transparent px-3 py-2 outline-none focus:border-foreground"
+          className="border bg-transparent px-3 py-2 outline-none focus:border-foreground"
         />
       )}
     </label>
@@ -152,12 +152,12 @@ function SelectField({
 }) {
   return (
     <label className="grid gap-2">
-      <span className="text-sm">{label}{required && <span className="text-[color:var(--brand)]"> *</span>}</span>
+      <span className="text-sm">{label}{required && <span className="text-foreground"> *</span>}</span>
       <select
         name={name}
         required={required}
         defaultValue=""
-        className="border hairline bg-transparent px-3 py-2 outline-none focus:border-foreground"
+        className="border bg-transparent px-3 py-2 outline-none focus:border-foreground"
       >
         <option value="" disabled>Select one…</option>
         {options.map((o) => (

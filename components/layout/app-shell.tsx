@@ -10,11 +10,11 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <SidebarProvider>
         <AppSidebar />
         <SidebarInset>
-          <header className="sticky top-0 z-30 flex h-12 items-center gap-3 border-b hairline bg-background/80 backdrop-blur px-4 font-ui">
+          <header className="sticky top-0 z-30 flex h-12 items-center gap-3 border-b bg-background/80 backdrop-blur px-4">
             <SidebarTrigger />
             <Separator orientation="vertical" className="h-4" />
             <span className="text-xs uppercase tracking-widest text-muted-foreground">
-              Common · open-source legal architecture
+              Common — the African VC standard. Open source. Free forever.
             </span>
           </header>
           <div>{children}</div>

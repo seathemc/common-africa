@@ -13,12 +13,12 @@ export default function TopicsIndex() {
   }, {});
 
   return (
-    <div className="container-wide py-12 font-ui">
+    <div className="mx-auto max-w-5xl px-6 py-12">
       <header className="max-w-3xl">
-        <div className="text-xs uppercase tracking-widest text-[color:var(--brand)]">
+        <div className="text-xs uppercase tracking-widest text-foreground">
           Topic-axis browse
         </div>
-        <h1 className="mt-2 font-body text-3xl md:text-5xl tracking-tight">
+        <h1 className="mt-2 text-3xl md:text-5xl tracking-tight">
           Browse by barrier, not by country.
         </h1>
         <p className="mt-4 text-muted-foreground leading-relaxed">
@@ -30,7 +30,7 @@ export default function TopicsIndex() {
       {Object.entries(byCategory).map(([category, items]) => (
         <section key={category} className="mt-12">
           <div className="flex items-baseline gap-3">
-            <h2 className="font-body text-xl tracking-tight">
+            <h2 className="text-xl tracking-tight">
               {TOPIC_LABELS[category] ?? category}
             </h2>
             <Badge variant="secondary">{items.length}</Badge>

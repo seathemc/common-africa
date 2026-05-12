@@ -29,9 +29,9 @@ export default async function SignatoriesPage({
   }
 
   return (
-    <section className="container-wide py-20">
+    <section className="mx-auto max-w-5xl px-6 py-20">
       {verify === "ok" && (
-        <div className="mb-10 border-l-2 border-[color:var(--brand)] pl-4 text-sm">
+        <div className="mb-10 border-l-2 border-primary pl-4 text-sm">
           Email verified — your signature is now on the wall.
         </div>
       )}
@@ -61,7 +61,7 @@ export default async function SignatoriesPage({
       {dbAvailable && signatories.length > 0 && (
         <ul className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {signatories.map((s) => (
-            <li key={s.id} className="border hairline p-5">
+            <li key={s.id} className="border p-5">
               <div className="font-medium">{s.name}</div>
               <div className="text-sm text-muted-foreground mt-0.5">
                 {[s.role, s.organization, s.country].filter(Boolean).join(" · ")}

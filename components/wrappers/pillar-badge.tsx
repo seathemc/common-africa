@@ -10,7 +10,7 @@ const STYLES: Record<Pillar, string> = {
   regional:
     "border-emerald-800/30 bg-emerald-50 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-200",
   continental:
-    "border-[color:var(--brand)]/30 bg-[color:var(--brand)]/5 text-[color:var(--brand)]",
+    "border-primary/30 bg-primary/5 text-foreground",
 };
 
 const LABELS: Record<Pillar, string> = {
@@ -28,7 +28,7 @@ export function PillarBadge({
   className?: string;
 }) {
   return (
-    <Badge variant="outline" className={cn(STYLES[pillar], "font-ui", className)}>
+    <Badge variant="outline" className={cn(STYLES[pillar], className)}>
       {LABELS[pillar]}
     </Badge>
   );

@@ -28,9 +28,9 @@ export default function ActsPage() {
   const barriers = getBarriers();
 
   return (
-    <div className="container-wide py-12 font-ui">
+    <div className="mx-auto max-w-5xl px-6 py-12">
       <header className="max-w-3xl">
-        <h1 className="font-body text-3xl md:text-4xl tracking-tight">
+        <h1 className="text-3xl md:text-4xl tracking-tight">
           Africa's startup acts
         </h1>
         <p className="mt-3 text-muted-foreground leading-relaxed">
@@ -41,7 +41,7 @@ export default function ActsPage() {
 
       <section className="mt-10">
         <div className="flex items-baseline gap-3">
-          <h2 className="font-body text-xl tracking-tight">Enacted</h2>
+          <h2 className="text-xl tracking-tight">Enacted</h2>
           <Badge variant="secondary">{enacted.length}</Badge>
         </div>
         <ActsTable acts={enacted} />
@@ -49,7 +49,7 @@ export default function ActsPage() {
 
       <section className="mt-16">
         <div className="flex items-baseline gap-3">
-          <h2 className="font-body text-xl tracking-tight">In development</h2>
+          <h2 className="text-xl tracking-tight">In development</h2>
           <Badge variant="outline">{drafting.length}</Badge>
         </div>
         <ActsTable acts={drafting} />
@@ -99,7 +99,7 @@ export default function ActsPage() {
                 <li key={b.id}>
                   <Link
                     href={`/topics/${b.id}`}
-                    className="no-underline rounded-full border hairline px-3 py-1 text-xs hover:bg-foreground hover:text-background transition-colors"
+                    className="no-underline rounded-full border px-3 py-1 text-xs hover:bg-foreground hover:text-background transition-colors"
                   >
                     {TOPIC_LABELS[b.category] ?? b.category} · {b.title.toLowerCase()}
                   </Link>

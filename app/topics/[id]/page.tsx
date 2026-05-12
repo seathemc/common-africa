@@ -46,16 +46,16 @@ export default async function TopicDetail({
   }
 
   return (
-    <div className="container-wide py-12 font-ui">
+    <div className="mx-auto max-w-5xl px-6 py-12">
       <Link href="/topics" className="text-sm text-muted-foreground">
         ← All topics
       </Link>
 
       <header className="mt-6 max-w-3xl">
-        <div className="text-xs uppercase tracking-widest text-[color:var(--brand)]">
+        <div className="text-xs uppercase tracking-widest text-foreground">
           {TOPIC_LABELS[barrier.category] ?? barrier.category}
         </div>
-        <h1 className="mt-2 font-body text-3xl md:text-4xl tracking-tight">
+        <h1 className="mt-2 text-3xl md:text-4xl tracking-tight">
           {barrier.title}
         </h1>
         <p className="mt-4 text-muted-foreground leading-relaxed">
