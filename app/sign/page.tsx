@@ -42,15 +42,14 @@ export default function SignPage() {
   if (status === "ok") {
     return (
       <section className="container-prose py-24 text-center">
-        <h1 className="text-3xl tracking-tight">Signed.</h1>
-        <p className="mt-4 text-[color:var(--muted)]">
-          You're on the list. We'll be in touch as Common evolves.
+        <h1 className="text-3xl tracking-tight">Check your inbox.</h1>
+        <p className="mt-4 text-muted-foreground leading-relaxed">
+          We sent you a confirmation link. Click it to verify your email — your
+          signature appears on the public wall once verified.
         </p>
-        <div className="mt-8">
-          <Link href="/signatories" className="text-sm">
-            See the wall →
-          </Link>
-        </div>
+        <p className="mt-3 text-sm text-muted-foreground">
+          Didn't get it? Check spam, or try signing again.
+        </p>
       </section>
     );
   }
@@ -58,12 +57,22 @@ export default function SignPage() {
   return (
     <section className="container-prose py-20">
       <h1 className="text-3xl md:text-4xl tracking-tight">Sign the manifesto.</h1>
-      <p className="mt-4 text-[color:var(--muted)] leading-relaxed">
+      <p className="mt-4 text-muted-foreground leading-relaxed">
         Add your name to the call for an integrated legal architecture for Africa's startup economy:
         a Pan-African Startup Entity, a Startup Passport, surgical national reforms, and an enhanced AU Model Law.
       </p>
 
       <form onSubmit={onSubmit} className="mt-10 grid gap-6">
+        {/* Honeypot — hidden from real users; bots fill every field. */}
+        <div
+          aria-hidden="true"
+          style={{ position: "absolute", left: "-10000px", top: "auto", width: 1, height: 1, overflow: "hidden" }}
+        >
+          <label>
+            Website
+            <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+          </label>
+        </div>
         <Field label="Full name" name="name" required />
         <Field label="Email" name="email" type="email" required />
         <div className="grid md:grid-cols-2 gap-6">
@@ -85,7 +94,7 @@ export default function SignPage() {
           >
             {status === "submitting" ? "Signing…" : "Sign"}
           </button>
-          {error && <span className="text-sm text-[color:var(--accent)]">{error}</span>}
+          {error && <span className="text-sm text-[color:var(--brand)]">{error}</span>}
         </div>
       </form>
     </section>
@@ -109,7 +118,7 @@ function Field({
 }) {
   return (
     <label className="grid gap-2">
-      <span className="text-sm">{label}{required && <span className="text-[color:var(--accent)]"> *</span>}</span>
+      <span className="text-sm">{label}{required && <span className="text-[color:var(--brand)]"> *</span>}</span>
       {textarea ? (
         <textarea
           name={name}
@@ -143,7 +152,7 @@ function SelectField({
 }) {
   return (
     <label className="grid gap-2">
-      <span className="text-sm">{label}{required && <span className="text-[color:var(--accent)]"> *</span>}</span>
+      <span className="text-sm">{label}{required && <span className="text-[color:var(--brand)]"> *</span>}</span>
       <select
         name={name}
         required={required}

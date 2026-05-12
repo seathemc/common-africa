@@ -1,81 +1,180 @@
 import Link from "next/link";
-import { getActs } from "@/lib/data";
+import { getActs, getBarriers, TOPIC_LABELS, type Act } from "@/lib/data";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
 
 export const metadata = { title: "Africa's startup acts — Common" };
 
 export default function ActsPage() {
   const acts = getActs();
-  const enacted = acts.filter((a) => a.status === "enacted").sort((a, b) => (a.year ?? 0) - (b.year ?? 0));
+  const enacted = acts
+    .filter((a) => a.status === "enacted")
+    .sort((a, b) => (a.year ?? 0) - (b.year ?? 0));
   const drafting = acts.filter((a) => a.status === "in-development");
+  const barriers = getBarriers();
 
   return (
-    <section className="container-wide py-20">
-      <h1 className="text-3xl md:text-4xl tracking-tight">Africa's startup acts</h1>
-      <p className="mt-4 max-w-2xl text-[color:var(--muted)] leading-relaxed">
-        {acts.length} frameworks across the continent — covering 75–78% of African GDP. Independently drafted,
-        structurally similar. The convergence is the opportunity.
-      </p>
+    <div className="container-wide py-12 font-ui">
+      <header className="max-w-3xl">
+        <h1 className="font-body text-3xl md:text-4xl tracking-tight">
+          Africa's startup acts
+        </h1>
+        <p className="mt-3 text-muted-foreground leading-relaxed">
+          {acts.length} frameworks across the continent — covering 75–78% of African GDP.
+          Independently drafted, structurally similar. The convergence is the opportunity.
+        </p>
+      </header>
 
-      <h2 className="mt-16 text-sm uppercase tracking-widest text-[color:var(--muted)]">
-        Enacted ({enacted.length})
-      </h2>
-      <ActsTable acts={enacted} />
+      <section className="mt-10">
+        <div className="flex items-baseline gap-3">
+          <h2 className="font-body text-xl tracking-tight">Enacted</h2>
+          <Badge variant="secondary">{enacted.length}</Badge>
+        </div>
+        <ActsTable acts={enacted} />
+      </section>
 
-      <h2 className="mt-20 text-sm uppercase tracking-widest text-[color:var(--muted)]">
-        In development ({drafting.length})
-      </h2>
-      <ActsTable acts={drafting} />
+      <section className="mt-16">
+        <div className="flex items-baseline gap-3">
+          <h2 className="font-body text-xl tracking-tight">In development</h2>
+          <Badge variant="outline">{drafting.length}</Badge>
+        </div>
+        <ActsTable acts={drafting} />
+      </section>
 
-      <div className="mt-20 border-t hairline pt-10">
-        <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">
-          The convergence pattern
-        </h2>
-        <ul className="mt-6 grid md:grid-cols-2 gap-x-12 gap-y-4 text-[color:var(--muted)] leading-relaxed">
-          <li><strong className="text-foreground">Age limits:</strong> all between 5 and 10 years (Tunisia 8, Nigeria 10, Senegal 8, DRC 7, Ivory Coast 8, Ethiopia 5).</li>
-          <li><strong className="text-foreground">Labelling systems:</strong> all use certification, not new legal entities.</li>
-          <li><strong className="text-foreground">Tax holidays:</strong> all promise them. None apply automatically on labelling.</li>
-          <li><strong className="text-foreground">Oversight bodies:</strong> all create a dedicated authority (College of Startups, NCDIE, DER/FJ…).</li>
-        </ul>
-      </div>
-    </section>
+      <section className="mt-20 grid lg:grid-cols-2 gap-6">
+        <Card>
+          <CardHeader>
+            <CardTitle>The convergence pattern</CardTitle>
+            <CardDescription>
+              Independently drafted, structurally similar — that's the harmonisation foothold.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-3 text-muted-foreground leading-relaxed text-sm">
+              <li>
+                <strong className="text-foreground">Age limits:</strong> all 5–10 years (Tunisia 8,
+                Nigeria 10, Senegal 8, DRC 7, Ivory Coast 8, Ethiopia 5).
+              </li>
+              <li>
+                <strong className="text-foreground">Labelling systems:</strong> all use
+                certification, not new legal entities.
+              </li>
+              <li>
+                <strong className="text-foreground">Tax holidays:</strong> all promise them. None
+                apply automatically on labelling.
+              </li>
+              <li>
+                <strong className="text-foreground">Oversight bodies:</strong> all create a
+                dedicated authority (College of Startups, NCDIE, DER/FJ…).
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Or browse by barrier</CardTitle>
+            <CardDescription>
+              The same legal barriers recur across 4–8 jurisdictions, and the same PASE clauses
+              solve them everywhere.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="flex flex-wrap gap-2">
+              {barriers.slice(0, 8).map((b) => (
+                <li key={b.id}>
+                  <Link
+                    href={`/topics/${b.id}`}
+                    className="no-underline rounded-full border hairline px-3 py-1 text-xs hover:bg-foreground hover:text-background transition-colors"
+                  >
+                    {TOPIC_LABELS[b.category] ?? b.category} · {b.title.toLowerCase()}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <Link href="/topics" className="mt-5 inline-block text-sm">
+              All topics →
+            </Link>
+          </CardContent>
+        </Card>
+      </section>
+    </div>
   );
 }
 
-function ActsTable({ acts }: { acts: ReturnType<typeof getActs> }) {
+function ActsTable({ acts }: { acts: Act[] }) {
   return (
-    <div className="mt-6 overflow-x-auto border hairline">
-      <table className="w-full text-sm">
-        <thead>
-          <tr className="border-b hairline text-left text-[color:var(--muted)]">
-            <th className="px-4 py-3 font-normal">Country</th>
-            <th className="px-4 py-3 font-normal">Region / REC</th>
-            <th className="px-4 py-3 font-normal">Year</th>
-            <th className="px-4 py-3 font-normal">Age limit</th>
-            <th className="px-4 py-3 font-normal">Labelling body</th>
-            <th className="px-4 py-3 font-normal">Tax holiday</th>
-            <th className="px-4 py-3 font-normal"></th>
-          </tr>
-        </thead>
-        <tbody>
-          {acts.map((a) => (
-            <tr key={a.iso} className="border-b hairline last:border-b-0 hover:bg-black/[0.02]">
-              <td className="px-4 py-3">
-                <Link href={`/acts/${a.iso.toLowerCase()}`} className="no-underline font-medium">
-                  {a.country}
-                </Link>
-              </td>
-              <td className="px-4 py-3 text-[color:var(--muted)]">{a.region} · {a.rec}</td>
-              <td className="px-4 py-3 text-[color:var(--muted)]">{a.year ?? "—"}</td>
-              <td className="px-4 py-3 text-[color:var(--muted)]">{a.ageLimit ? `${a.ageLimit} yrs` : "—"}</td>
-              <td className="px-4 py-3 text-[color:var(--muted)]">{a.labelingBody ?? "—"}</td>
-              <td className="px-4 py-3 text-[color:var(--muted)]">{a.taxHoliday ?? "—"}</td>
-              <td className="px-4 py-3 text-right">
-                <Link href={`/acts/${a.iso.toLowerCase()}`} className="text-sm">Details →</Link>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    <Card className="mt-4 p-0 overflow-hidden">
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Country</TableHead>
+            <TableHead>Region · REC</TableHead>
+            <TableHead>Year</TableHead>
+            <TableHead>Age limit</TableHead>
+            <TableHead>Labelling body</TableHead>
+            <TableHead>Tax holiday</TableHead>
+            <TableHead>Recommendations</TableHead>
+            <TableHead className="w-12 sr-only">Action</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {acts.map((a) => {
+            const recCount = a.recommendations?.length ?? 0;
+            return (
+              <TableRow key={a.iso}>
+                <TableCell className="font-medium">
+                  <Link href={`/acts/${a.iso.toLowerCase()}`} className="no-underline">
+                    {a.country}
+                  </Link>
+                </TableCell>
+                <TableCell className="text-muted-foreground text-xs">
+                  {a.region} · {a.rec}
+                </TableCell>
+                <TableCell className="text-muted-foreground">{a.year ?? "—"}</TableCell>
+                <TableCell className="text-muted-foreground">
+                  {a.ageLimit ? `${a.ageLimit} yrs` : "—"}
+                </TableCell>
+                <TableCell className="text-muted-foreground text-xs">
+                  {a.labelingBody ?? "—"}
+                </TableCell>
+                <TableCell className="text-muted-foreground text-xs">
+                  {a.taxHoliday ?? "—"}
+                </TableCell>
+                <TableCell>
+                  {recCount > 0 ? (
+                    <Badge variant="secondary">{recCount}</Badge>
+                  ) : (
+                    <span className="text-muted-foreground text-xs">—</span>
+                  )}
+                </TableCell>
+                <TableCell className="text-right">
+                  <Link
+                    href={`/acts/${a.iso.toLowerCase()}`}
+                    className="text-xs text-muted-foreground"
+                  >
+                    Open →
+                  </Link>
+                </TableCell>
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table>
+    </Card>
   );
 }
