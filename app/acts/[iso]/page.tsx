@@ -1,6 +1,15 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getActByIso, getActs } from "@/lib/data";
+import {
+  getActByIso,
+  getActs,
+  PILLAR_LABELS,
+  PRIORITY_ORDER,
+  recommendationsByPillar,
+  TOPIC_LABELS,
+  type Pillar,
+  type Recommendation,
+} from "@/lib/data";
 
 export function generateStaticParams() {
   return getActs().map((a) => ({ iso: a.iso.toLowerCase() }));
@@ -10,6 +19,10 @@ export default async function ActDetailPage({ params }: { params: Promise<{ iso:
   const { iso } = await params;
   const act = getActByIso(iso);
   if (!act) notFound();
+
+  const grouped = recommendationsByPillar(act);
+  const totalRecs = act.recommendations?.length ?? 0;
+  const pillarOrder: Pillar[] = ["national", "regional", "industry", "continental"];
 
   return (
     <section className="container-prose py-20">
@@ -54,17 +67,107 @@ export default async function ActDetailPage({ params }: { params: Promise<{ iso:
         </div>
       )}
 
-      <div className="mt-16 border-t hairline pt-10">
-        <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">What Common proposes for {act.country}</h2>
+      <div className="mt-20 border-t hairline pt-10">
+        <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">
+          What Common proposes for {act.country} ({totalRecs} recommendations)
+        </h2>
         <p className="mt-4 text-[color:var(--muted)] leading-relaxed">
-          A combination of <Link href="/entity">PASE clause adoption</Link> (immediate, contractual), bilateral{" "}
-          Startup Passport agreements with neighbouring economies, and surgical amendments to address the
-          gaps listed above. The detailed per-country recommendation engine is being built — see the{" "}
-          <Link href="/">manifesto</Link>.
+          Each recommendation cites the specific code and article. Recommendations are organised by the
+          pillar that owns them: <strong className="text-foreground">national</strong> (statutory amendments),
+          {" "}<strong className="text-foreground">regional</strong> (REC-level harmonisation),
+          {" "}<strong className="text-foreground">industry</strong> (PASE clauses adoptable today),
+          {" "}<strong className="text-foreground">continental</strong> (AU Model Law).
         </p>
+
+        {pillarOrder.map((pillar) => {
+          const recs = grouped[pillar].slice().sort(
+            (a, b) =>
+              PRIORITY_ORDER[a.priority] - PRIORITY_ORDER[b.priority],
+          );
+          if (recs.length === 0) return null;
+          return (
+            <div key={pillar} className="mt-14">
+              <h3 className="text-xs uppercase tracking-widest text-[color:var(--accent)]">
+                {PILLAR_LABELS[pillar]} · {recs.length}
+              </h3>
+              <ul className="mt-6 space-y-8">
+                {recs.map((r) => (
+                  <RecommendationCard key={r.id} rec={r} />
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+
+        {totalRecs === 0 && (
+          <p className="mt-8 text-[color:var(--muted)]">
+            No recommendations yet for {act.country}. Contributions welcome on{" "}
+            <a href="https://github.com/seathemc/common-africa">GitHub</a>.
+          </p>
+        )}
       </div>
     </section>
   );
+}
+
+function RecommendationCard({ rec }: { rec: Recommendation }) {
+  return (
+    <li className="border hairline p-6">
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-xs uppercase tracking-widest text-[color:var(--muted)]">
+        <span>{TOPIC_LABELS[rec.topic] ?? rec.topic}</span>
+        <span>·</span>
+        <PriorityBadge priority={rec.priority} />
+      </div>
+      <div className="mt-3 text-sm text-[color:var(--muted)]">
+        {rec.code} <span className="text-foreground">— {rec.article}</span>
+      </div>
+      <div className="mt-5 grid gap-4 text-[15px] leading-relaxed">
+        <div>
+          <div className="text-xs uppercase tracking-widest text-[color:var(--muted)]">Current</div>
+          <div className="mt-1">{rec.currentText}</div>
+        </div>
+        <div>
+          <div className="text-xs uppercase tracking-widest text-[color:var(--muted)]">Proposed</div>
+          <div className="mt-1">{rec.proposedAmendment}</div>
+        </div>
+      </div>
+      {(rec.paseClauses.length > 0 || rec.barrierId) && (
+        <div className="mt-5 flex flex-wrap gap-2 text-xs">
+          {rec.barrierId && (
+            <Link
+              href={`/topics/${rec.barrierId}`}
+              className="no-underline rounded-full border hairline px-3 py-1"
+            >
+              Topic: {rec.barrierId.replace(/-/g, " ")}
+            </Link>
+          )}
+          {rec.paseClauses.map((slug) => (
+            <Link
+              key={slug}
+              href={`/entity/${slug}`}
+              className="no-underline rounded-full border hairline px-3 py-1 hover:bg-foreground hover:text-background"
+            >
+              PASE: {slug.replace(/-/g, " ")}
+            </Link>
+          ))}
+        </div>
+      )}
+      {rec.sourcePages.length > 0 && (
+        <div className="mt-4 text-xs text-[color:var(--muted)]">
+          Source: paper p. {rec.sourcePages.join(", ")}
+        </div>
+      )}
+    </li>
+  );
+}
+
+function PriorityBadge({ priority }: { priority: Recommendation["priority"] }) {
+  const colours: Record<Recommendation["priority"], string> = {
+    high: "text-[color:var(--accent)]",
+    medium: "text-foreground",
+    low: "text-[color:var(--muted)]",
+  };
+  return <span className={colours[priority]}>{priority} priority</span>;
 }
 
 function Stat({ label, value }: { label: string; value: string }) {

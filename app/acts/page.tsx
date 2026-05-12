@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getActs } from "@/lib/data";
+import { getActs, getBarriers, TOPIC_LABELS } from "@/lib/data";
 
 export const metadata = { title: "Africa's startup acts — Common" };
 
@@ -35,6 +35,28 @@ export default function ActsPage() {
           <li><strong className="text-foreground">Labelling systems:</strong> all use certification, not new legal entities.</li>
           <li><strong className="text-foreground">Tax holidays:</strong> all promise them. None apply automatically on labelling.</li>
           <li><strong className="text-foreground">Oversight bodies:</strong> all create a dedicated authority (College of Startups, NCDIE, DER/FJ…).</li>
+        </ul>
+      </div>
+
+      <div className="mt-20 border-t hairline pt-10">
+        <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">
+          Or browse by barrier instead of by country
+        </h2>
+        <p className="mt-4 text-[color:var(--muted)] leading-relaxed">
+          The same legal barriers recur across 4-8 jurisdictions, and the same PASE clauses solve them
+          everywhere. <Link href="/topics">Browse by topic →</Link>
+        </p>
+        <ul className="mt-6 flex flex-wrap gap-2 text-sm">
+          {getBarriers().slice(0, 8).map((b) => (
+            <li key={b.id}>
+              <Link
+                href={`/topics/${b.id}`}
+                className="no-underline rounded-full border hairline px-4 py-1.5 hover:bg-foreground hover:text-background"
+              >
+                {TOPIC_LABELS[b.category] ?? b.category} · {b.title.toLowerCase()}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
