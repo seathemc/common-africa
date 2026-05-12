@@ -9,18 +9,27 @@ datasource db {
 }
 
 model Signatory {
-  id           String   @id @default(cuid())
+  id           String    @id @default(cuid())
   name         String
-  email        String   @unique
-  role         String   // founder | investor | counsel | policymaker | other
+  email        String    @unique
+  role         String   // founder | investor | counsel | policymaker | academic | other
   organization String?
-  country      String   // ISO-3166 alpha-2
+  country      String
   message      String?
-  showPublicly Boolean  @default(true)
-  verified     Boolean  @default(false)
-  createdAt    DateTime @default(now())
+  showPublicly Boolean   @default(true)
+  verified     Boolean   @default(false)
+  verifyToken  String?   @unique
+  verifiedAt   DateTime?
+  createdAt    DateTime  @default(now())
 
   @@index([country])
   @@index([role])
   @@index([createdAt])
+  @@index([verified])
+}
+
+model RateLimit {
+  key       String   @id
+  count     Int      @default(0)
+  windowEnd DateTime
 }
