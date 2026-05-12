@@ -7,8 +7,10 @@
     "addresses": [
       "Tunisia Commercial Code Article 154 (one-share-one-vote)",
       "Nigeria CAMA Section 124 (one-share-one-vote)",
-      "OHADA Uniform Act (2014) — no provisions for multi-class structures"
+      "OHADA Uniform Act (2014) — no provisions for multi-class structures",
+      "Ethiopia Commercial Code — no multi-class authorisation"
     ],
+    "barrierIds": ["one-share-one-vote", "ohada-rigidity"],
     "versions": [
       { "tradition": "common-law", "file": "multi-class-shares.common-law.md", "label": "Common-law (Nigeria, Kenya, Ghana, South Africa)" },
       { "tradition": "ohada", "file": "multi-class-shares.ohada.md", "label": "OHADA / civil-law (Senegal, Ivory Coast, DRC, Tunisia)" }
@@ -23,8 +25,10 @@
       "Tunisia Capital Market Decree 2018-1037 (no SAFE recognition)",
       "Nigeria SEC Rules 2013 (classifies SAFEs as debt)",
       "BCEAO Instruction 2012-09 (only recognises debt and equity)",
-      "OHADA Uniform Act on commercial companies (no recognition for hybrid instruments)"
+      "OHADA Uniform Act on commercial companies (no recognition for hybrid instruments)",
+      "Ethiopia Securities Proclamation (debt and equity only)"
     ],
+    "barrierIds": ["safe-convertible-non-recognition", "ohada-rigidity"],
     "versions": [
       { "tradition": "common-law", "file": "safe.common-law.md", "label": "Common-law (post-money SAFE, valuation cap)" },
       { "tradition": "ohada", "file": "safe.ohada.md", "label": "OHADA / civil-law (compatible with sociétés par actions)" }

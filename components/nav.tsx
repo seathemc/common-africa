@@ -9,6 +9,7 @@ export default function Nav() {
         </Link>
         <nav className="flex items-center gap-6">
           <Link href="/acts" className="no-underline">Startup acts</Link>
+          <Link href="/topics" className="no-underline">Topics</Link>
           <Link href="/entity" className="no-underline">Entity</Link>
           <Link href="/signatories" className="no-underline">Signatories</Link>
           <Link

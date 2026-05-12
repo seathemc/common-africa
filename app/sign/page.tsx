@@ -42,15 +42,14 @@ export default function SignPage() {
   if (status === "ok") {
     return (
       <section className="container-prose py-24 text-center">
-        <h1 className="text-3xl tracking-tight">Signed.</h1>
-        <p className="mt-4 text-[color:var(--muted)]">
-          You're on the list. We'll be in touch as Common evolves.
+        <h1 className="text-3xl tracking-tight">Check your inbox.</h1>
+        <p className="mt-4 text-[color:var(--muted)] leading-relaxed">
+          We sent you a confirmation link. Click it to verify your email — your
+          signature appears on the public wall once verified.
         </p>
-        <div className="mt-8">
-          <Link href="/signatories" className="text-sm">
-            See the wall →
-          </Link>
-        </div>
+        <p className="mt-3 text-sm text-[color:var(--muted)]">
+          Didn't get it? Check spam, or try signing again.
+        </p>
       </section>
     );
   }
@@ -64,6 +63,16 @@ export default function SignPage() {
       </p>
 
       <form onSubmit={onSubmit} className="mt-10 grid gap-6">
+        {/* Honeypot — hidden from real users; bots fill every field. */}
+        <div
+          aria-hidden="true"
+          style={{ position: "absolute", left: "-10000px", top: "auto", width: 1, height: 1, overflow: "hidden" }}
+        >
+          <label>
+            Website
+            <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+          </label>
+        </div>
         <Field label="Full name" name="name" required />
         <Field label="Email" name="email" type="email" required />
         <div className="grid md:grid-cols-2 gap-6">

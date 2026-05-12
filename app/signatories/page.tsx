@@ -3,7 +3,12 @@ import { prisma } from "@/lib/prisma";
 
 export const revalidate = 60;
 
-export default async function SignatoriesPage() {
+export default async function SignatoriesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ verify?: string }>;
+}) {
+  const { verify } = await searchParams;
   let signatories: Array<{
     id: string;
     name: string;
@@ -15,8 +20,8 @@ export default async function SignatoriesPage() {
   let dbAvailable = true;
   try {
     signatories = await prisma.signatory.findMany({
-      where: { showPublicly: true },
-      orderBy: { createdAt: "desc" },
+      where: { showPublicly: true, verified: true },
+      orderBy: { verifiedAt: "desc" },
       select: { id: true, name: true, role: true, organization: true, country: true, message: true },
     });
   } catch {
@@ -25,12 +30,17 @@ export default async function SignatoriesPage() {
 
   return (
     <section className="container-wide py-20">
+      {verify === "ok" && (
+        <div className="mb-10 border-l-2 border-[color:var(--accent)] pl-4 text-sm">
+          Email verified — your signature is now on the wall.
+        </div>
+      )}
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h1 className="text-3xl md:text-4xl tracking-tight">Signatories</h1>
           <p className="mt-2 text-[color:var(--muted)]">
             {dbAvailable
-              ? `${signatories.length.toLocaleString()} people have signed.`
+              ? `${signatories.length.toLocaleString()} verified ${signatories.length === 1 ? "signature" : "signatures"}.`
               : "Database not connected — signatory wall will populate once configured."}
           </p>
         </div>
