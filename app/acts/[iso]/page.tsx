@@ -27,11 +27,11 @@ export default async function ActDetailPage({ params }: { params: Promise<{ iso:
   return (
     <section className="container-prose py-20">
       <Link href="/acts" className="text-sm">← All acts</Link>
-      <div className="mt-6 text-xs uppercase tracking-widest text-[color:var(--accent)]">
+      <div className="mt-6 text-xs uppercase tracking-widest text-[color:var(--brand)]">
         {act.status === "enacted" ? `Enacted · ${act.year}` : "In development"}
       </div>
       <h1 className="mt-2 text-3xl md:text-4xl tracking-tight">{act.country}</h1>
-      <p className="mt-2 text-[color:var(--muted)]">
+      <p className="mt-2 text-muted-foreground">
         {act.actName} · {act.region} · {act.rec}
       </p>
 
@@ -53,7 +53,7 @@ export default async function ActDetailPage({ params }: { params: Promise<{ iso:
       </dl>
 
       <div className="mt-12">
-        <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">Known gaps</h2>
+        <h2 className="text-sm uppercase tracking-widest text-muted-foreground">Known gaps</h2>
         <ul className="mt-4 space-y-3 list-disc list-inside text-[color:var(--foreground)] leading-relaxed">
           {act.knownGaps.map((g, i) => (
             <li key={i}>{g}</li>
@@ -62,16 +62,16 @@ export default async function ActDetailPage({ params }: { params: Promise<{ iso:
       </div>
 
       {act.notable && (
-        <div className="mt-12 border-l-2 border-[color:var(--accent)] pl-4 italic text-[color:var(--muted)]">
+        <div className="mt-12 border-l-2 border-[color:var(--brand)] pl-4 italic text-muted-foreground">
           {act.notable}
         </div>
       )}
 
       <div className="mt-20 border-t hairline pt-10">
-        <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">
+        <h2 className="text-sm uppercase tracking-widest text-muted-foreground">
           What Common proposes for {act.country} ({totalRecs} recommendations)
         </h2>
-        <p className="mt-4 text-[color:var(--muted)] leading-relaxed">
+        <p className="mt-4 text-muted-foreground leading-relaxed">
           Each recommendation cites the specific code and article. Recommendations are organised by the
           pillar that owns them: <strong className="text-foreground">national</strong> (statutory amendments),
           {" "}<strong className="text-foreground">regional</strong> (REC-level harmonisation),
@@ -87,7 +87,7 @@ export default async function ActDetailPage({ params }: { params: Promise<{ iso:
           if (recs.length === 0) return null;
           return (
             <div key={pillar} className="mt-14">
-              <h3 className="text-xs uppercase tracking-widest text-[color:var(--accent)]">
+              <h3 className="text-xs uppercase tracking-widest text-[color:var(--brand)]">
                 {PILLAR_LABELS[pillar]} · {recs.length}
               </h3>
               <ul className="mt-6 space-y-8">
@@ -100,7 +100,7 @@ export default async function ActDetailPage({ params }: { params: Promise<{ iso:
         })}
 
         {totalRecs === 0 && (
-          <p className="mt-8 text-[color:var(--muted)]">
+          <p className="mt-8 text-muted-foreground">
             No recommendations yet for {act.country}. Contributions welcome on{" "}
             <a href="https://github.com/seathemc/common-africa">GitHub</a>.
           </p>
@@ -113,21 +113,21 @@ export default async function ActDetailPage({ params }: { params: Promise<{ iso:
 function RecommendationCard({ rec }: { rec: Recommendation }) {
   return (
     <li className="border hairline p-6">
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-xs uppercase tracking-widest text-[color:var(--muted)]">
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-xs uppercase tracking-widest text-muted-foreground">
         <span>{TOPIC_LABELS[rec.topic] ?? rec.topic}</span>
         <span>·</span>
         <PriorityBadge priority={rec.priority} />
       </div>
-      <div className="mt-3 text-sm text-[color:var(--muted)]">
+      <div className="mt-3 text-sm text-muted-foreground">
         {rec.code} <span className="text-foreground">— {rec.article}</span>
       </div>
       <div className="mt-5 grid gap-4 text-[15px] leading-relaxed">
         <div>
-          <div className="text-xs uppercase tracking-widest text-[color:var(--muted)]">Current</div>
+          <div className="text-xs uppercase tracking-widest text-muted-foreground">Current</div>
           <div className="mt-1">{rec.currentText}</div>
         </div>
         <div>
-          <div className="text-xs uppercase tracking-widest text-[color:var(--muted)]">Proposed</div>
+          <div className="text-xs uppercase tracking-widest text-muted-foreground">Proposed</div>
           <div className="mt-1">{rec.proposedAmendment}</div>
         </div>
       </div>
@@ -153,7 +153,7 @@ function RecommendationCard({ rec }: { rec: Recommendation }) {
         </div>
       )}
       {rec.sourcePages.length > 0 && (
-        <div className="mt-4 text-xs text-[color:var(--muted)]">
+        <div className="mt-4 text-xs text-muted-foreground">
           Source: paper p. {rec.sourcePages.join(", ")}
         </div>
       )}
@@ -163,9 +163,9 @@ function RecommendationCard({ rec }: { rec: Recommendation }) {
 
 function PriorityBadge({ priority }: { priority: Recommendation["priority"] }) {
   const colours: Record<Recommendation["priority"], string> = {
-    high: "text-[color:var(--accent)]",
+    high: "text-[color:var(--brand)]",
     medium: "text-foreground",
-    low: "text-[color:var(--muted)]",
+    low: "text-muted-foreground",
   };
   return <span className={colours[priority]}>{priority} priority</span>;
 }
@@ -173,7 +173,7 @@ function PriorityBadge({ priority }: { priority: Recommendation["priority"] }) {
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <dt className="text-[color:var(--muted)]">{label}</dt>
+      <dt className="text-muted-foreground">{label}</dt>
       <dd className="mt-1 font-medium">{value}</dd>
     </div>
   );

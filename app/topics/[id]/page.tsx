@@ -41,19 +41,19 @@ export default async function TopicDetail({
     <section className="container-prose py-20">
       <Link href="/topics" className="text-sm">← All topics</Link>
 
-      <div className="mt-6 text-xs uppercase tracking-widest text-[color:var(--accent)]">
+      <div className="mt-6 text-xs uppercase tracking-widest text-[color:var(--brand)]">
         {TOPIC_LABELS[barrier.category] ?? barrier.category}
       </div>
       <h1 className="mt-2 text-3xl md:text-4xl tracking-tight">{barrier.title}</h1>
-      <p className="mt-6 text-lg leading-relaxed text-[color:var(--muted)]">{barrier.description}</p>
+      <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{barrier.description}</p>
 
       <div className="mt-10 border hairline p-6">
-        <div className="text-xs uppercase tracking-widest text-[color:var(--muted)]">
+        <div className="text-xs uppercase tracking-widest text-muted-foreground">
           The surgical fix
         </div>
         <p className="mt-3 leading-relaxed">{barrier.surgicalFix}</p>
         {barrier.sourcePages.length > 0 && (
-          <div className="mt-4 text-xs text-[color:var(--muted)]">
+          <div className="mt-4 text-xs text-muted-foreground">
             Source: paper p. {barrier.sourcePages.join(", ")}
           </div>
         )}
@@ -61,7 +61,7 @@ export default async function TopicDetail({
 
       {clauses.length > 0 && (
         <div className="mt-12">
-          <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">
+          <h2 className="text-sm uppercase tracking-widest text-muted-foreground">
             PASE clauses that solve this contractually
           </h2>
           <ul className="mt-6 grid gap-4">
@@ -70,7 +70,7 @@ export default async function TopicDetail({
                 <Link href={`/entity/${c.slug}`} className="no-underline text-lg">
                   {c.title} →
                 </Link>
-                <p className="mt-2 text-sm text-[color:var(--muted)] leading-relaxed">
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   {c.summary}
                 </p>
               </li>
@@ -80,7 +80,7 @@ export default async function TopicDetail({
       )}
 
       <div className="mt-12">
-        <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">
+        <h2 className="text-sm uppercase tracking-widest text-muted-foreground">
           Affected jurisdictions · {affectedActs.length}
         </h2>
         <div className="mt-4 flex flex-wrap gap-2 text-sm">
@@ -98,7 +98,7 @@ export default async function TopicDetail({
 
       {allRecsForBarrier.length > 0 && (
         <div className="mt-16 border-t hairline pt-10">
-          <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">
+          <h2 className="text-sm uppercase tracking-widest text-muted-foreground">
             Country-specific recommendations · {allRecsForBarrier.length}
           </h2>
           <ul className="mt-6 space-y-6">
@@ -111,7 +111,7 @@ export default async function TopicDetail({
                   >
                     {act.country}
                   </Link>
-                  <span className="text-[color:var(--muted)]">
+                  <span className="text-muted-foreground">
                     {rec.code} — {rec.article}
                   </span>
                 </div>

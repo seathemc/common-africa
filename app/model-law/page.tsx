@@ -5,13 +5,13 @@ export const metadata = { title: "AU Model Law on Startup Promotion — Common" 
 export default function ModelLawPage() {
   return (
     <section className="container-prose py-20">
-      <div className="text-xs uppercase tracking-widest text-[color:var(--accent)]">
+      <div className="text-xs uppercase tracking-widest text-[color:var(--brand)]">
         Continental layer
       </div>
       <h1 className="mt-2 text-3xl md:text-5xl tracking-tight">
         The AU Model Law on Startup Promotion.
       </h1>
-      <p className="mt-6 text-lg leading-relaxed text-[color:var(--muted)]">
+      <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
         In July 2024 the African Union adopted a Model Law on Startup Promotion — the continental
         framework that the 14 national startup acts could converge on. The Model Law sets the
         outline. <strong className="text-foreground">Common</strong> proposes the implementation
@@ -25,7 +25,7 @@ export default function ModelLawPage() {
         <Link href="/sign">sign as a policymaker</Link> to join the working group.
       </div>
 
-      <h2 className="mt-16 text-sm uppercase tracking-widest text-[color:var(--muted)]">
+      <h2 className="mt-16 text-sm uppercase tracking-widest text-muted-foreground">
         What's in scope
       </h2>
       <ol className="mt-6 space-y-6 text-[color:var(--foreground)] leading-relaxed list-decimal list-inside">
@@ -49,10 +49,10 @@ export default function ModelLawPage() {
         </li>
       </ol>
 
-      <h2 className="mt-16 text-sm uppercase tracking-widest text-[color:var(--muted)]">
+      <h2 className="mt-16 text-sm uppercase tracking-widest text-muted-foreground">
         Why this matters
       </h2>
-      <p className="mt-4 text-[color:var(--muted)] leading-relaxed">
+      <p className="mt-4 text-muted-foreground leading-relaxed">
         Without implementation specifications, the Model Law risks becoming another aspirational
         document. With them, it becomes adoption infrastructure: every RECs (ECOWAS, EAC, SADC,
         COMESA) can layer a passport on top, every African government drafting an act gets a

@@ -28,15 +28,15 @@ export default async function ClausePage({
     <section className="container-prose py-16">
       <Link href="/entity" className="text-sm">← Clause library</Link>
 
-      <div className="mt-6 text-xs uppercase tracking-widest text-[color:var(--accent)]">
+      <div className="mt-6 text-xs uppercase tracking-widest text-[color:var(--brand)]">
         {clause.category}
       </div>
       <h1 className="mt-2 text-3xl md:text-4xl tracking-tight">{clause.title}</h1>
-      <p className="mt-4 text-[color:var(--muted)] leading-relaxed">{clause.summary}</p>
+      <p className="mt-4 text-muted-foreground leading-relaxed">{clause.summary}</p>
 
       {clause.addresses && clause.addresses.length > 0 && (
         <div className="mt-8 border hairline p-5">
-          <div className="text-xs uppercase tracking-widest text-[color:var(--muted)]">
+          <div className="text-xs uppercase tracking-widest text-muted-foreground">
             Addresses these specific barriers
           </div>
           <ul className="mt-3 space-y-1.5 text-sm list-disc list-inside">
@@ -70,7 +70,7 @@ export default async function ClausePage({
         dangerouslySetInnerHTML={{ __html: html }}
       />
 
-      <div className="mt-16 border-t hairline pt-6 text-sm text-[color:var(--muted)]">
+      <div className="mt-16 border-t hairline pt-6 text-sm text-muted-foreground">
         Found an issue or have a better drafting? Open a PR on GitHub or{" "}
         <Link href="/sign">sign as counsel</Link> to join the review group.
       </div>

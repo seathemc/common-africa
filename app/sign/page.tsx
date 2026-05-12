@@ -43,11 +43,11 @@ export default function SignPage() {
     return (
       <section className="container-prose py-24 text-center">
         <h1 className="text-3xl tracking-tight">Check your inbox.</h1>
-        <p className="mt-4 text-[color:var(--muted)] leading-relaxed">
+        <p className="mt-4 text-muted-foreground leading-relaxed">
           We sent you a confirmation link. Click it to verify your email — your
           signature appears on the public wall once verified.
         </p>
-        <p className="mt-3 text-sm text-[color:var(--muted)]">
+        <p className="mt-3 text-sm text-muted-foreground">
           Didn't get it? Check spam, or try signing again.
         </p>
       </section>
@@ -57,7 +57,7 @@ export default function SignPage() {
   return (
     <section className="container-prose py-20">
       <h1 className="text-3xl md:text-4xl tracking-tight">Sign the manifesto.</h1>
-      <p className="mt-4 text-[color:var(--muted)] leading-relaxed">
+      <p className="mt-4 text-muted-foreground leading-relaxed">
         Add your name to the call for an integrated legal architecture for Africa's startup economy:
         a Pan-African Startup Entity, a Startup Passport, surgical national reforms, and an enhanced AU Model Law.
       </p>
@@ -94,7 +94,7 @@ export default function SignPage() {
           >
             {status === "submitting" ? "Signing…" : "Sign"}
           </button>
-          {error && <span className="text-sm text-[color:var(--accent)]">{error}</span>}
+          {error && <span className="text-sm text-[color:var(--brand)]">{error}</span>}
         </div>
       </form>
     </section>
@@ -118,7 +118,7 @@ function Field({
 }) {
   return (
     <label className="grid gap-2">
-      <span className="text-sm">{label}{required && <span className="text-[color:var(--accent)]"> *</span>}</span>
+      <span className="text-sm">{label}{required && <span className="text-[color:var(--brand)]"> *</span>}</span>
       {textarea ? (
         <textarea
           name={name}
@@ -152,7 +152,7 @@ function SelectField({
 }) {
   return (
     <label className="grid gap-2">
-      <span className="text-sm">{label}{required && <span className="text-[color:var(--accent)]"> *</span>}</span>
+      <span className="text-sm">{label}{required && <span className="text-[color:var(--brand)]"> *</span>}</span>
       <select
         name={name}
         required={required}

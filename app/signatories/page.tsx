@@ -31,14 +31,14 @@ export default async function SignatoriesPage({
   return (
     <section className="container-wide py-20">
       {verify === "ok" && (
-        <div className="mb-10 border-l-2 border-[color:var(--accent)] pl-4 text-sm">
+        <div className="mb-10 border-l-2 border-[color:var(--brand)] pl-4 text-sm">
           Email verified — your signature is now on the wall.
         </div>
       )}
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h1 className="text-3xl md:text-4xl tracking-tight">Signatories</h1>
-          <p className="mt-2 text-[color:var(--muted)]">
+          <p className="mt-2 text-muted-foreground">
             {dbAvailable
               ? `${signatories.length.toLocaleString()} verified ${signatories.length === 1 ? "signature" : "signatures"}.`
               : "Database not connected — signatory wall will populate once configured."}
@@ -53,7 +53,7 @@ export default async function SignatoriesPage({
       </div>
 
       {dbAvailable && signatories.length === 0 && (
-        <p className="mt-16 text-[color:var(--muted)]">
+        <p className="mt-16 text-muted-foreground">
           No public signatories yet. Be the first.
         </p>
       )}
@@ -63,7 +63,7 @@ export default async function SignatoriesPage({
           {signatories.map((s) => (
             <li key={s.id} className="border hairline p-5">
               <div className="font-medium">{s.name}</div>
-              <div className="text-sm text-[color:var(--muted)] mt-0.5">
+              <div className="text-sm text-muted-foreground mt-0.5">
                 {[s.role, s.organization, s.country].filter(Boolean).join(" · ")}
               </div>
               {s.message && (

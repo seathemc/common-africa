@@ -17,19 +17,19 @@ export default async function HomePage() {
     <>
       {/* Hero */}
       <section className="container-prose pt-20 pb-16">
-        <p className="text-sm uppercase tracking-widest text-[color:var(--muted)]">
+        <p className="text-sm uppercase tracking-widest text-muted-foreground">
           A movement for a single African digital market
         </p>
         <h1 className="mt-6 text-4xl md:text-6xl leading-[1.05] tracking-tight">
           One legal architecture for {acts.length} African startup acts.
         </h1>
-        <p className="mt-6 text-lg leading-relaxed text-[color:var(--muted)]">
+        <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
           Africa's internet economy is projected to reach <strong className="text-foreground">$712B by 2050</strong>.
           {" "}
           {enacted} countries have enacted startup acts. {drafting} more are drafting one.
           Together they cover 75–78% of African GDP — but each one operates as an island.
         </p>
-        <p className="mt-4 text-lg leading-relaxed text-[color:var(--muted)]">
+        <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
           <strong className="text-foreground">Common</strong> is a movement to integrate them: a Pan-African Startup Entity
           founders can adopt today, a Startup Passport for cross-border recognition, surgical reforms to national codes,
           and an enhanced AU Model Law.
@@ -45,7 +45,7 @@ export default async function HomePage() {
             See the {acts.length} acts →
           </Link>
         </div>
-        <p className="mt-6 text-sm text-[color:var(--muted)]">
+        <p className="mt-6 text-sm text-muted-foreground">
           {signatoryCount === null
             ? "Signatory count unavailable until the database is connected."
             : `${signatoryCount.toLocaleString()} signatories so far.`}
@@ -55,7 +55,7 @@ export default async function HomePage() {
       {/* The four pillars */}
       <section className="border-t hairline">
         <div className="container-wide py-20">
-          <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">The four pillars</h2>
+          <h2 className="text-sm uppercase tracking-widest text-muted-foreground">The four pillars</h2>
           <div className="mt-10 grid md:grid-cols-2 gap-x-12 gap-y-12">
             <Pillar
               tag="Industry"
@@ -88,7 +88,7 @@ export default async function HomePage() {
       {/* Why this matters */}
       <section className="border-t hairline">
         <div className="container-prose py-20">
-          <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">Why now</h2>
+          <h2 className="text-sm uppercase tracking-widest text-muted-foreground">Why now</h2>
           <div className="mt-8 space-y-6 text-lg leading-relaxed">
             <p>
               <strong>83% of growth-stage African startups use offshore structures</strong> — not for tax avoidance,
@@ -114,12 +114,12 @@ export default async function HomePage() {
       {recent && recent.length > 0 && (
         <section className="border-t hairline">
           <div className="container-wide py-20">
-            <h2 className="text-sm uppercase tracking-widest text-[color:var(--muted)]">Recent signatories</h2>
+            <h2 className="text-sm uppercase tracking-widest text-muted-foreground">Recent signatories</h2>
             <ul className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {recent.map((s) => (
                 <li key={s.id} className="border hairline p-5">
                   <div className="font-medium">{s.name}</div>
-                  <div className="text-sm text-[color:var(--muted)]">
+                  <div className="text-sm text-muted-foreground">
                     {[s.role, s.organization, s.country].filter(Boolean).join(" · ")}
                   </div>
                 </li>
@@ -140,7 +140,7 @@ export default async function HomePage() {
           <h2 className="text-3xl md:text-4xl tracking-tight">
             If you're building, investing, advising, or legislating in Africa — sign.
           </h2>
-          <p className="mt-6 text-[color:var(--muted)]">
+          <p className="mt-6 text-muted-foreground">
             Founders, investors, in-house counsels, policymakers. Add your name. Make the case for one architecture.
           </p>
           <div className="mt-10">
@@ -170,9 +170,9 @@ function Pillar({
 }) {
   return (
     <div>
-      <div className="text-xs uppercase tracking-widest text-[color:var(--accent)]">{tag}</div>
+      <div className="text-xs uppercase tracking-widest text-[color:var(--brand)]">{tag}</div>
       <h3 className="mt-2 text-2xl tracking-tight">{title}</h3>
-      <p className="mt-3 text-[color:var(--muted)] leading-relaxed">{body}</p>
+      <p className="mt-3 text-muted-foreground leading-relaxed">{body}</p>
       <Link href={cta.href} className="mt-4 inline-block text-sm">
         {cta.label} →
       </Link>
