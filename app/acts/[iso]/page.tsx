@@ -6,16 +6,22 @@ import {
   PILLAR_LABELS,
   PRIORITY_ORDER,
   recommendationsByPillar,
-  TOPIC_LABELS,
   type Pillar,
-  type Recommendation,
 } from "@/lib/data";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { StatusBadge } from "@/components/wrappers/status-badge";
+import { RecommendationCard } from "@/components/wrappers/recommendation-card";
 
 export function generateStaticParams() {
   return getActs().map((a) => ({ iso: a.iso.toLowerCase() }));
 }
 
-export default async function ActDetailPage({ params }: { params: Promise<{ iso: string }> }) {
+export default async function ActDetailPage({
+  params,
+}: {
+  params: Promise<{ iso: string }>;
+}) {
   const { iso } = await params;
   const act = getActByIso(iso);
   if (!act) notFound();
@@ -23,158 +29,130 @@ export default async function ActDetailPage({ params }: { params: Promise<{ iso:
   const grouped = recommendationsByPillar(act);
   const totalRecs = act.recommendations?.length ?? 0;
   const pillarOrder: Pillar[] = ["national", "regional", "industry", "continental"];
+  const defaultTab = pillarOrder.find((p) => grouped[p].length > 0) ?? "national";
 
   return (
-    <section className="container-prose py-20">
-      <Link href="/acts" className="text-sm">← All acts</Link>
-      <div className="mt-6 text-xs uppercase tracking-widest text-[color:var(--brand)]">
-        {act.status === "enacted" ? `Enacted · ${act.year}` : "In development"}
-      </div>
-      <h1 className="mt-2 text-3xl md:text-4xl tracking-tight">{act.country}</h1>
-      <p className="mt-2 text-muted-foreground">
-        {act.actName} · {act.region} · {act.rec}
-      </p>
+    <div className="container-wide py-12 font-ui">
+      <Link href="/acts" className="text-sm text-muted-foreground">
+        ← All acts
+      </Link>
 
-      <dl className="mt-12 grid grid-cols-2 gap-y-6 gap-x-8 text-sm">
-        <Stat label="Age limit" value={act.ageLimit ? `${act.ageLimit} years` : "—"} />
-        <Stat label="Labelling body" value={act.labelingBody ?? "—"} />
-        <Stat label="Label" value={act.labelName ?? "—"} />
-        <Stat label="Tax holiday" value={act.taxHoliday ?? "—"} />
-        <Stat
-          label="Automatic tax application"
+      <header className="mt-6 flex flex-wrap items-start justify-between gap-6">
+        <div>
+          <h1 className="font-body text-4xl md:text-5xl tracking-tight">{act.country}</h1>
+          <p className="mt-2 text-muted-foreground">
+            {act.actName} · {act.region} · {act.rec}
+          </p>
+        </div>
+        <StatusBadge status={act.status as "enacted" | "in-development"} year={act.year} />
+      </header>
+
+      <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <StatCard label="Age limit" value={act.ageLimit ? `${act.ageLimit} years` : "—"} />
+        <StatCard label="Labelling body" value={act.labelingBody ?? "—"} />
+        <StatCard label="Label name" value={act.labelName ?? "—"} />
+        <StatCard label="Tax holiday" value={act.taxHoliday ?? "—"} />
+        <StatCard
+          label="Auto tax application"
           value={
             act.taxAutoApplied === null || act.taxAutoApplied === undefined
               ? "—"
               : act.taxAutoApplied
               ? "Yes"
-              : "No — separate verification required"
+              : "No"
           }
         />
-      </dl>
-
-      <div className="mt-12">
-        <h2 className="text-sm uppercase tracking-widest text-muted-foreground">Known gaps</h2>
-        <ul className="mt-4 space-y-3 list-disc list-inside text-[color:var(--foreground)] leading-relaxed">
-          {act.knownGaps.map((g, i) => (
-            <li key={i}>{g}</li>
-          ))}
-        </ul>
       </div>
 
-      {act.notable && (
-        <div className="mt-12 border-l-2 border-[color:var(--brand)] pl-4 italic text-muted-foreground">
-          {act.notable}
+      <div className="mt-12 grid lg:grid-cols-3 gap-6">
+        <Card className="lg:col-span-2">
+          <CardHeader>
+            <CardTitle className="text-base">Known gaps</CardTitle>
+            <CardDescription>
+              Where the act creates a paper right that doesn't yet operate in practice.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-3 list-disc list-inside leading-relaxed">
+              {act.knownGaps.map((g, i) => (
+                <li key={i}>{g}</li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+
+        {act.notable && (
+          <Card className="bg-muted/30">
+            <CardHeader>
+              <CardTitle className="text-base">Notable</CardTitle>
+            </CardHeader>
+            <CardContent className="italic text-muted-foreground leading-relaxed">
+              {act.notable}
+            </CardContent>
+          </Card>
+        )}
+      </div>
+
+      <section className="mt-16">
+        <div className="flex flex-wrap items-baseline justify-between gap-4">
+          <h2 className="font-body text-2xl tracking-tight">
+            What Common proposes for {act.country}
+          </h2>
+          <span className="text-sm text-muted-foreground">
+            {totalRecs} recommendation{totalRecs === 1 ? "" : "s"} · sourced from the policy paper
+          </span>
         </div>
-      )}
 
-      <div className="mt-20 border-t hairline pt-10">
-        <h2 className="text-sm uppercase tracking-widest text-muted-foreground">
-          What Common proposes for {act.country} ({totalRecs} recommendations)
-        </h2>
-        <p className="mt-4 text-muted-foreground leading-relaxed">
-          Each recommendation cites the specific code and article. Recommendations are organised by the
-          pillar that owns them: <strong className="text-foreground">national</strong> (statutory amendments),
-          {" "}<strong className="text-foreground">regional</strong> (REC-level harmonisation),
-          {" "}<strong className="text-foreground">industry</strong> (PASE clauses adoptable today),
-          {" "}<strong className="text-foreground">continental</strong> (AU Model Law).
-        </p>
-
-        {pillarOrder.map((pillar) => {
-          const recs = grouped[pillar].slice().sort(
-            (a, b) =>
-              PRIORITY_ORDER[a.priority] - PRIORITY_ORDER[b.priority],
-          );
-          if (recs.length === 0) return null;
-          return (
-            <div key={pillar} className="mt-14">
-              <h3 className="text-xs uppercase tracking-widest text-[color:var(--brand)]">
-                {PILLAR_LABELS[pillar]} · {recs.length}
-              </h3>
-              <ul className="mt-6 space-y-8">
-                {recs.map((r) => (
-                  <RecommendationCard key={r.id} rec={r} />
-                ))}
-              </ul>
-            </div>
-          );
-        })}
-
-        {totalRecs === 0 && (
+        {totalRecs === 0 ? (
           <p className="mt-8 text-muted-foreground">
             No recommendations yet for {act.country}. Contributions welcome on{" "}
             <a href="https://github.com/seathemc/common-africa">GitHub</a>.
           </p>
+        ) : (
+          <Tabs defaultValue={defaultTab} className="mt-8">
+            <TabsList>
+              {pillarOrder.map((p) => (
+                <TabsTrigger key={p} value={p} disabled={grouped[p].length === 0}>
+                  {PILLAR_LABELS[p].split(" — ")[0]}
+                  <span className="ml-2 text-xs text-muted-foreground">
+                    {grouped[p].length}
+                  </span>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            {pillarOrder.map((p) => {
+              const recs = grouped[p].slice().sort(
+                (a, b) => PRIORITY_ORDER[a.priority] - PRIORITY_ORDER[b.priority],
+              );
+              return (
+                <TabsContent key={p} value={p} className="mt-6">
+                  <p className="text-sm text-muted-foreground max-w-2xl">
+                    {PILLAR_LABELS[p]}
+                  </p>
+                  <div className="mt-6 grid gap-4">
+                    {recs.map((r) => (
+                      <RecommendationCard key={r.id} rec={r} />
+                    ))}
+                  </div>
+                </TabsContent>
+              );
+            })}
+          </Tabs>
         )}
-      </div>
-    </section>
-  );
-}
-
-function RecommendationCard({ rec }: { rec: Recommendation }) {
-  return (
-    <li className="border hairline p-6">
-      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-xs uppercase tracking-widest text-muted-foreground">
-        <span>{TOPIC_LABELS[rec.topic] ?? rec.topic}</span>
-        <span>·</span>
-        <PriorityBadge priority={rec.priority} />
-      </div>
-      <div className="mt-3 text-sm text-muted-foreground">
-        {rec.code} <span className="text-foreground">— {rec.article}</span>
-      </div>
-      <div className="mt-5 grid gap-4 text-[15px] leading-relaxed">
-        <div>
-          <div className="text-xs uppercase tracking-widest text-muted-foreground">Current</div>
-          <div className="mt-1">{rec.currentText}</div>
-        </div>
-        <div>
-          <div className="text-xs uppercase tracking-widest text-muted-foreground">Proposed</div>
-          <div className="mt-1">{rec.proposedAmendment}</div>
-        </div>
-      </div>
-      {(rec.paseClauses.length > 0 || rec.barrierId) && (
-        <div className="mt-5 flex flex-wrap gap-2 text-xs">
-          {rec.barrierId && (
-            <Link
-              href={`/topics/${rec.barrierId}`}
-              className="no-underline rounded-full border hairline px-3 py-1"
-            >
-              Topic: {rec.barrierId.replace(/-/g, " ")}
-            </Link>
-          )}
-          {rec.paseClauses.map((slug) => (
-            <Link
-              key={slug}
-              href={`/entity/${slug}`}
-              className="no-underline rounded-full border hairline px-3 py-1 hover:bg-foreground hover:text-background"
-            >
-              PASE: {slug.replace(/-/g, " ")}
-            </Link>
-          ))}
-        </div>
-      )}
-      {rec.sourcePages.length > 0 && (
-        <div className="mt-4 text-xs text-muted-foreground">
-          Source: paper p. {rec.sourcePages.join(", ")}
-        </div>
-      )}
-    </li>
-  );
-}
-
-function PriorityBadge({ priority }: { priority: Recommendation["priority"] }) {
-  const colours: Record<Recommendation["priority"], string> = {
-    high: "text-[color:var(--brand)]",
-    medium: "text-foreground",
-    low: "text-muted-foreground",
-  };
-  return <span className={colours[priority]}>{priority} priority</span>;
-}
-
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <dt className="text-muted-foreground">{label}</dt>
-      <dd className="mt-1 font-medium">{value}</dd>
+      </section>
     </div>
+  );
+}
+
+function StatCard({ label, value }: { label: string; value: string }) {
+  return (
+    <Card className="py-4">
+      <CardContent className="px-4">
+        <div className="text-xs uppercase tracking-widest text-muted-foreground">
+          {label}
+        </div>
+        <div className="mt-1.5 text-sm font-medium leading-snug">{value}</div>
+      </CardContent>
+    </Card>
   );
 }
