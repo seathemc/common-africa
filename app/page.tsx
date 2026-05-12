@@ -79,7 +79,7 @@ export default async function HomePage() {
               tag="Continental"
               title="Enhanced AU Model Law"
               body="The AU shipped a Model Law on Startup Promotion in July 2024. Common proposes implementation specifications: standard term sheets, API standards, passport protocols, and industry classification aligned with Agenda 2063."
-              cta={{ href: "/", label: "Coming soon" }}
+              cta={{ href: "/model-law", label: "Read the proposal" }}
             />
           </div>
         </div>
@@ -182,7 +182,7 @@ function Pillar({
 
 async function safeCount(): Promise<number | null> {
   try {
-    return await prisma.signatory.count({ where: { showPublicly: true } });
+    return await prisma.signatory.count({ where: { verified: true } });
   } catch {
     return null;
   }
@@ -191,8 +191,8 @@ async function safeCount(): Promise<number | null> {
 async function safeRecent() {
   try {
     return await prisma.signatory.findMany({
-      where: { showPublicly: true },
-      orderBy: { createdAt: "desc" },
+      where: { showPublicly: true, verified: true },
+      orderBy: { verifiedAt: "desc" },
       take: 6,
       select: { id: true, name: true, role: true, organization: true, country: true },
     });
