@@ -18,7 +18,125 @@
       "Commercial Code Article 154 enforces one-share-one-vote, blocking multi-class share structures",
       "30% foreign-worker cap conflicts with talent strategy"
     ],
-    "notable": "First African startup act; industry-led implementation model (Tunisian Startups association) outperformed pure government-led approaches."
+    "notable": "First African startup act; industry-led implementation model (Tunisian Startups association) outperformed pure government-led approaches.",
+    "recommendations": [
+      {
+        "id": "tn-csc-154",
+        "code": "Code des Sociétés Commerciales",
+        "article": "Article 154",
+        "currentText": "Mandates one-share-one-vote for sociétés anonymes",
+        "proposedAmendment": "Exempt Startup-Label-holding companies; permit multi-class share structures (voting, non-voting, preferred) with disclosure in the articles of association.",
+        "pillar": "national",
+        "topic": "corporate",
+        "barrierId": "one-share-one-vote",
+        "paseClauses": [
+          "multi-class-shares"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          62,
+          387
+        ]
+      },
+      {
+        "id": "tn-csc-94-388",
+        "code": "Code des Sociétés Commerciales",
+        "article": "Articles 94 / 388",
+        "currentText": "Requires minimum seven shareholders for SA; SARL board of 3-12 directors",
+        "proposedAmendment": "Permit Startup-Label companies to incorporate as an SAS-equivalent form with minimum two shareholders and single-director governance.",
+        "pillar": "national",
+        "topic": "corporate",
+        "barrierId": "one-share-one-vote",
+        "paseClauses": [
+          "multi-class-shares"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          49
+        ]
+      },
+      {
+        "id": "tn-fx-code-6",
+        "code": "Foreign Exchange Code",
+        "article": "Article 6",
+        "currentText": "Requires Central Bank authorization for all forex accounts, contradicting Startup Act Article 17 which grants such accounts to labelled startups",
+        "proposedAmendment": "Amend Article 6 to auto-recognize Startup Act Article 17 forex-account grants; no separate BCT authorization needed for labelled startups.",
+        "pillar": "national",
+        "topic": "forex",
+        "barrierId": "forex-layering",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          4,
+          308
+        ]
+      },
+      {
+        "id": "tn-capital-market-decree",
+        "code": "Décret 2018-1037 (Capital Market Decree) + BCT Memorandum (Feb 2020)",
+        "article": "Decree provisions on recognised instruments",
+        "currentText": "Does not recognise SAFEs; BCT memo classifies SAFEs as debt for accounting and prudential purposes",
+        "proposedAmendment": "Amend Décret 2018-1037 to recognise SAFEs and convertible notes as equity-linked securities when issued by Startup-Label companies. Withdraw or update the Feb-2020 BCT memo accordingly.",
+        "pillar": "national",
+        "topic": "securities",
+        "barrierId": "safe-convertible-non-recognition",
+        "paseClauses": [
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          62
+        ]
+      },
+      {
+        "id": "tn-irpp-38",
+        "code": "Impôt sur le Revenu des Personnes Physiques (IRPP)",
+        "article": "Article 38",
+        "currentText": "Taxes equity grants to employees as immediate wages on theoretical valuations, despite Startup Act Articles 8-9 allowing equity compensation",
+        "proposedAmendment": "Amend IRPP Article 38 to defer taxation of equity grants in Startup-Label companies until a liquidity event (sale, IPO, or secondary).",
+        "pillar": "national",
+        "topic": "labor",
+        "barrierId": "no-esop-framework",
+        "paseClauses": [
+          "esop"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          63
+        ]
+      },
+      {
+        "id": "tn-labor-30pct",
+        "code": "Tunisia Labor Code",
+        "article": "Foreign-worker quota provisions",
+        "currentText": "Caps foreign personnel at 30%, reverting to 10% after three years",
+        "proposedAmendment": "Raise the cap to 50% for Startup-Label companies, with local-talent-training commitments as a condition.",
+        "pillar": "national",
+        "topic": "labor",
+        "barrierId": "foreign-worker-quotas",
+        "paseClauses": [],
+        "priority": "medium",
+        "sourcePages": [
+          49
+        ]
+      },
+      {
+        "id": "tn-passport-maghreb",
+        "code": "Bilateral mutual-recognition agreement",
+        "article": "Tunisia ↔ Morocco (Maghreb pilot)",
+        "currentText": "No mutual recognition of Startup Label across AMU members despite shared regional framework",
+        "proposedAmendment": "Bilateral passport between Tunisia's Startup Label and Morocco's equivalent label once Morocco's framework activates. Tunisia-Algeria as a follow-on.",
+        "pillar": "regional",
+        "topic": "regional",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "medium",
+        "sourcePages": [
+          6,
+          73
+        ]
+      }
+    ]
   },
   {
     "country": "Senegal",
@@ -40,7 +158,125 @@
       "20% foreign-worker quota constrains hiring",
       "No mutual recognition with neighbouring Ivory Coast despite identical ECOWAS membership"
     ],
-    "notable": "DER/FJ acts as both labeling authority and seed funder — unique single-window model."
+    "notable": "DER/FJ acts as both labeling authority and seed funder — unique single-window model.",
+    "recommendations": [
+      {
+        "id": "sn-ohada-sas-i",
+        "code": "OHADA AUSCGIE",
+        "article": "Articles 5, 6, 39, 309-314",
+        "currentText": "Limits OHADA companies to SARL/SA/SAS forms with fixed capital, rigid governance, and default one-share-one-vote",
+        "proposedAmendment": "Amend AUSCGIE to introduce a Société par Actions Simplifiée-Innovation (SAS-I) — a modular vehicle with multi-class shares, flexible governance, and standardised convertible-instrument recognition. Requires OHADA Council of Ministers consensus across 17 member states.",
+        "pillar": "regional",
+        "topic": "corporate",
+        "barrierId": "ohada-rigidity",
+        "paseClauses": [
+          "multi-class-shares",
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          58,
+          350
+        ]
+      },
+      {
+        "id": "sn-startup-act-12",
+        "code": "Loi 2020-01 + BCEAO Instruction 2012-09",
+        "article": "Startup Act Article 12; BCEAO Instruction 2012-09",
+        "currentText": "Startup Act mentions 'titres convertibles' but BCEAO Instruction 2012-09 only recognises traditional debt and equity",
+        "proposedAmendment": "BCEAO circular recognising SAFEs and convertible notes as equity-linked securities for Startup-Label companies in the UEMOA zone, with standardised prudential treatment.",
+        "pillar": "regional",
+        "topic": "securities",
+        "barrierId": "safe-convertible-non-recognition",
+        "paseClauses": [
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          50,
+          60
+        ]
+      },
+      {
+        "id": "sn-labor-l40-l67",
+        "code": "Code du Travail (Loi n° 97-17)",
+        "article": "Articles L.40 and L.67",
+        "currentText": "Impose rigid employment structures incompatible with equity-based compensation and project-based work",
+        "proposedAmendment": "Permit Startup-Label companies to grant equity compensation with tax deferred to liquidity, and to engage technical specialists under flexible project-based contracts.",
+        "pillar": "national",
+        "topic": "labor",
+        "barrierId": "no-esop-framework",
+        "paseClauses": [
+          "esop"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          50
+        ]
+      },
+      {
+        "id": "sn-tax-auto-apply",
+        "code": "Loi 2020-01 + DGID procedures",
+        "article": "Article 8 (Startup Act) + General Tax Code",
+        "currentText": "Tax benefits require separate DGID verification, typically 45-60 days against a 30-day statutory limit",
+        "proposedAmendment": "Tax benefits apply automatically from the date of Startup Label issuance. API integration between DER/FJ and DGID eliminates re-submission.",
+        "pillar": "national",
+        "topic": "tax",
+        "barrierId": "tax-not-auto-applied",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          5,
+          308
+        ]
+      },
+      {
+        "id": "sn-bceao-09-2010",
+        "code": "BCEAO Regulation No. 09/2010/CM/UEMOA",
+        "article": "Repatriation provisions",
+        "currentText": "Imposes 30-day repatriation requirements on export proceeds, incompatible with SaaS billing cycles",
+        "proposedAmendment": "Carve-out for digital-service exports by Startup-Label companies: quarterly rather than daily/30-day reporting, higher transaction limits, and recognition of stripe/paddle/wise-style payment processors.",
+        "pillar": "regional",
+        "topic": "forex",
+        "barrierId": "forex-layering",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          60
+        ]
+      },
+      {
+        "id": "sn-passport-ci",
+        "code": "Bilateral mutual-recognition agreement",
+        "article": "Senegal ↔ Ivory Coast (OHADA / UEMOA / ECOWAS pilot)",
+        "currentText": "No mutual recognition despite Senegal and Ivory Coast both being members of ECOWAS, OHADA, and UEMOA, with nearly identical Startup Act qualification criteria",
+        "proposedAmendment": "Bilateral passport: a startup labelled by DER/FJ is auto-recognised by Côte d'Ivoire's labelling committee within 14 days. Sector-first: fintech, then logistics, then e-commerce.",
+        "pillar": "regional",
+        "topic": "regional",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          60,
+          64
+        ]
+      },
+      {
+        "id": "sn-data-protection",
+        "code": "Senegal Data Protection Law (Loi n° 2008-12)",
+        "article": "Cross-border data flow provisions",
+        "currentText": "Misaligns with the ECOWAS Supplementary Act on Personal Data Protection (2010)",
+        "proposedAmendment": "Bring the national data-protection law into alignment with the ECOWAS Supplementary Act; recognise cross-border data flows to ECOWAS member states without additional adequacy decision for Startup-Label companies.",
+        "pillar": "national",
+        "topic": "data",
+        "barrierId": "data-protection-divergence",
+        "paseClauses": [],
+        "priority": "medium",
+        "sourcePages": [
+          60
+        ]
+      }
+    ]
   },
   {
     "country": "Nigeria",
@@ -61,7 +297,155 @@
       "CAMA Section 124 enforces one-share-one-vote, blocking multi-class share structures",
       "Pension fund rules (PenCom) restrict institutional capital from flowing to startups"
     ],
-    "notable": "Largest GDP among enacted-act countries; CBN regulatory sandbox is most mature on the continent."
+    "notable": "Largest GDP among enacted-act countries; CBN regulatory sandbox is most mature on the continent.",
+    "recommendations": [
+      {
+        "id": "ng-cama-124",
+        "code": "Companies and Allied Matters Act 2020 (CAMA)",
+        "article": "Section 124(2)",
+        "currentText": "Explicitly prohibits dual-class voting for private companies",
+        "proposedAmendment": "Exempt NSA-labelled startups; permit multi-class share structures with disclosure in the memorandum and articles. Companies that lose the label revert to one-share-one-vote on a forward basis (no retroactive conversion).",
+        "pillar": "national",
+        "topic": "corporate",
+        "barrierId": "one-share-one-vote",
+        "paseClauses": [
+          "multi-class-shares"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          53,
+          387
+        ]
+      },
+      {
+        "id": "ng-cama-18",
+        "code": "Companies and Allied Matters Act 2020 (CAMA)",
+        "article": "Section 18",
+        "currentText": "Limits recognised company types to private and public companies",
+        "proposedAmendment": "Recognise NSA-labelled startup as a class of private company with bespoke governance defaults aligned with Section 124 amendment.",
+        "pillar": "national",
+        "topic": "corporate",
+        "barrierId": "one-share-one-vote",
+        "paseClauses": [
+          "multi-class-shares"
+        ],
+        "priority": "medium",
+        "sourcePages": [
+          53
+        ]
+      },
+      {
+        "id": "ng-sec-rules-2013",
+        "code": "SEC Rules and Regulations 2013",
+        "article": "Provisions on convertible instruments",
+        "currentText": "Classify SAFEs as debt instruments; Section 23 of NSA references convertibles but standard tools remain in a legal gray area",
+        "proposedAmendment": "Amend SEC Rules to recognise SAFEs and convertible notes as equity-linked securities when issued by NSA-labelled startups. Treat as equity for accounting, tax, and prudential reporting.",
+        "pillar": "national",
+        "topic": "securities",
+        "barrierId": "safe-convertible-non-recognition",
+        "paseClauses": [
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          53
+        ]
+      },
+      {
+        "id": "ng-labor-esop",
+        "code": "Labor Act + Personal Income Tax Act",
+        "article": "Equity-compensation provisions (absent)",
+        "currentText": "No provisions for equity-based compensation; PIT taxes equity grants as immediate income at grant",
+        "proposedAmendment": "Amend the Labor Act and PIT to recognise ESOPs for NSA-labelled startups with taxation deferred to liquidity event. Standardised vesting and cliff provisions in the schedule.",
+        "pillar": "national",
+        "topic": "labor",
+        "barrierId": "no-esop-framework",
+        "paseClauses": [
+          "esop"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          53
+        ]
+      },
+      {
+        "id": "ng-cbn-fx-manual-6",
+        "code": "CBN Foreign Exchange Manual",
+        "article": "Section 6 (Certificate of Capital Importation)",
+        "currentText": "Requires CCIs for all foreign investments regardless of startup status; adds 4-6 weeks to routine cross-border payments",
+        "proposedAmendment": "Simplified forex framework for NSA-labelled startups: expedited CCI processing (under 5 business days), higher transaction limits, and recognition of standard fintech payment processors for non-resident customer billing.",
+        "pillar": "national",
+        "topic": "forex",
+        "barrierId": "forex-layering",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          53,
+          287
+        ]
+      },
+      {
+        "id": "ng-schedule-3-auto",
+        "code": "Nigeria Startup Act + Finance Act",
+        "article": "NSA Schedule 3; coordination with FIRS",
+        "currentText": "Pioneer-status tax incentives in NSA Schedule 3 not integrated into the federal tax system; FIRS coordination ongoing two years after enactment",
+        "proposedAmendment": "Finance Act amendment auto-recognising NSA label as pioneer status for FIRS purposes. API integration between the NSA portal and FIRS eliminates re-submission.",
+        "pillar": "national",
+        "topic": "tax",
+        "barrierId": "tax-not-auto-applied",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          4
+        ]
+      },
+      {
+        "id": "ng-notap",
+        "code": "National Office for Technology Acquisition and Promotion (NOTAP) Act",
+        "article": "Technology-transfer registration",
+        "currentText": "NOTAP approval requirements add 2-6 months to technology-transfer arrangements, particularly for intra-group IP licensing",
+        "proposedAmendment": "Exempt intra-group IP licensing by NSA-labelled startups from NOTAP review. Maintain notification but not approval.",
+        "pillar": "national",
+        "topic": "ip",
+        "barrierId": "ip-bottlenecks",
+        "paseClauses": [],
+        "priority": "medium",
+        "sourcePages": [
+          53
+        ]
+      },
+      {
+        "id": "ng-pencom",
+        "code": "PenCom Regulations on Investment of Pension Fund Assets",
+        "article": "Alternative-asset allocation",
+        "currentText": "Restricts pension funds from investing in startups, despite Africa-based investors now representing 35% of African startup deals",
+        "proposedAmendment": "Amend PenCom regulations to permit allocations to licensed startup funds (not direct startup equity) with prudential guardrails; target 2-3% of total AUM by 2028. Ghana's 5%-by-2026 mandate is the template.",
+        "pillar": "national",
+        "topic": "capital",
+        "barrierId": "pension-fund-restrictions",
+        "paseClauses": [],
+        "priority": "medium",
+        "sourcePages": [
+          11
+        ]
+      },
+      {
+        "id": "ng-ecowas-passport",
+        "code": "ECOWAS Startup Regulatory Passport",
+        "article": "Treaty hooks: ECOWAS Article 59 (Free Movement); Protocol on Trade in Services (2019)",
+        "currentText": "Despite ECOWAS membership, no mutual recognition with neighbouring markets; expanding from Nigeria to Ghana or Senegal requires 60-90 days to establish operations",
+        "proposedAmendment": "ECOWAS-wide passport built on Article 59 + the Protocol on Trade in Services. Phase 1: NSA labelling auto-recognised by Ghana/Senegal/Ivory Coast for fintech, e-commerce, and logistics startups.",
+        "pillar": "regional",
+        "topic": "regional",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          60,
+          64
+        ]
+      }
+    ]
   },
   {
     "country": "Democratic Republic of Congo",
@@ -81,7 +465,106 @@
       "No legal recognition for SAFEs or convertible notes",
       "Limited interface with banking and forex regulations"
     ],
-    "notable": "Could harmonise immediately with Senegal and Ivory Coast under shared OHADA commercial code."
+    "notable": "Could harmonise immediately with Senegal and Ivory Coast under shared OHADA commercial code.",
+    "recommendations": [
+      {
+        "id": "cd-ohada-sas-i",
+        "code": "OHADA AUSCGIE",
+        "article": "Articles 5, 309-314",
+        "currentText": "Only SARL and SA structures available; fixed capital requirements and rigid governance procedures incompatible with startup volatility",
+        "proposedAmendment": "Joint OHADA SAS-I form (shared with Senegal, Ivory Coast) — modular vehicle with multi-class shares, flexible governance, and standardised convertible recognition.",
+        "pillar": "regional",
+        "topic": "corporate",
+        "barrierId": "ohada-rigidity",
+        "paseClauses": [
+          "multi-class-shares",
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          52,
+          58
+        ]
+      },
+      {
+        "id": "cd-labor-40-67",
+        "code": "Labor Code (Law No. 015/2002)",
+        "article": "Articles 40 and 67",
+        "currentText": "Immediate employment obligations incompatible with startup volatility; mobile-money ventures employ more agents than direct employees to avoid these restrictions",
+        "proposedAmendment": "Permit JEI-labelled startups to engage technical specialists under flexible project-based contracts; recognise ESOP grants with taxation deferred to liquidity.",
+        "pillar": "national",
+        "topic": "labor",
+        "barrierId": "no-esop-framework",
+        "paseClauses": [
+          "esop"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          52
+        ]
+      },
+      {
+        "id": "cd-fx-70",
+        "code": "Foreign Exchange Regulations (2014)",
+        "article": "Article 70",
+        "currentText": "Requires complex declarations for cross-border capital movements; 45-60 day processing times consume 15-20% of operational budgets for JEI-labelled startups",
+        "proposedAmendment": "Expedited process for JEI-labelled startups: declarations completed in under 5 business days; simplified documentation for routine intra-group transactions.",
+        "pillar": "national",
+        "topic": "forex",
+        "barrierId": "forex-layering",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          52
+        ]
+      },
+      {
+        "id": "cd-eac-passport",
+        "code": "Bilateral mutual-recognition agreement",
+        "article": "DRC ↔ Rwanda; DRC ↔ Kenya (EAC pilot)",
+        "currentText": "Despite 2022 EAC accession, no mechanism to recognise Rwanda or Kenya startup labelling and vice versa",
+        "proposedAmendment": "Bilateral pilots leveraging EAC Common Market Protocol Articles 13-14: JEI-labelled startups auto-recognised in Rwanda; Kigali's startup support extended to Kinshasa-based JEI holders.",
+        "pillar": "regional",
+        "topic": "regional",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          52,
+          64
+        ]
+      },
+      {
+        "id": "cd-cnpe-activation",
+        "code": "Loi sur les startups + Implementation decrees",
+        "article": "Articles 31-42 (institutional)",
+        "currentText": "CNPE (National Council for Entrepreneurship Promotion) establishment pending; JEI digital portal in development; implementation decrees still being formulated three years after enactment",
+        "proposedAmendment": "Complete CNPE activation within 6 months. Deploy JEI digital portal with API integration to OHADA RCCM, DGI (tax), and the Central Bank.",
+        "pillar": "national",
+        "topic": "implementation",
+        "barrierId": "agency-fragmentation",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          52
+        ]
+      },
+      {
+        "id": "cd-tax-34-38",
+        "code": "Loi sur les startups",
+        "article": "Articles 34-38 (graduated tax exemptions)",
+        "currentText": "Graduated tax exemptions (100% → 50% over five years) defined but not yet operationally integrated with DGI",
+        "proposedAmendment": "Auto-apply graduated exemptions from the date of JEI label issuance; API connection between the labelling portal and DGI.",
+        "pillar": "national",
+        "topic": "tax",
+        "barrierId": "tax-not-auto-applied",
+        "paseClauses": [],
+        "priority": "medium",
+        "sourcePages": [
+          52
+        ]
+      }
+    ]
   },
   {
     "country": "Ivory Coast",
@@ -90,9 +573,9 @@
     "rec": "ECOWAS / OHADA / UEMOA",
     "status": "enacted",
     "year": 2024,
-    "actName": "Loi sur les startups",
+    "actName": "Loi sur les startups (PADS)",
     "ageLimit": 8,
-    "labelingBody": "Ministry of Digital Transition",
+    "labelingBody": "Digital Startup Labeling Committee (Ministry of Digital Transition)",
     "labelName": "Label Startup",
     "taxHoliday": "5-8 years",
     "taxAutoApplied": false,
@@ -101,7 +584,108 @@
       "OHADA constraints on multi-class shares carry over",
       "SAFE/convertible-note recognition unresolved"
     ],
-    "notable": "Most recent enactment in francophone West Africa; strong candidate for OHADA-wide harmonisation pilot."
+    "notable": "Most recent francophone West African enactment; strong candidate for OHADA-wide harmonisation pilot.",
+    "recommendations": [
+      {
+        "id": "ci-ohada-sas-i",
+        "code": "OHADA AUSCGIE",
+        "article": "Articles 5, 6, 39, 309-314",
+        "currentText": "OHADA Uniform Act lacks provisions for complex cap tables, multi-class shares, and modern financing instruments",
+        "proposedAmendment": "Joint OHADA SAS-I form (shared recommendation with Senegal, DRC). Côte d'Ivoire well-placed to lead the OHADA Council of Ministers initiative.",
+        "pillar": "regional",
+        "topic": "corporate",
+        "barrierId": "ohada-rigidity",
+        "paseClauses": [
+          "multi-class-shares",
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          54,
+          58
+        ]
+      },
+      {
+        "id": "ci-syscohada-annex-b",
+        "code": "SYSCOHADA (OHADA Accounting Framework, Revised 2017)",
+        "article": "Articles 10-15 (personnel and equity-compensation treatment)",
+        "currentText": "No clear treatment for stock options and modern talent incentives; mandates formal documentation even for freelance, equity-based, or asynchronous employment models",
+        "proposedAmendment": "Create SYSCOHADA Annex B for labelled startups: specialised accounting treatment for ESOPs, capitalised R&D expenses, and intangible-asset valuation.",
+        "pillar": "regional",
+        "topic": "accounting",
+        "barrierId": "no-esop-framework",
+        "paseClauses": [
+          "esop"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          54,
+          58
+        ]
+      },
+      {
+        "id": "ci-cgi-15",
+        "code": "Code Général des Impôts (CGI)",
+        "article": "Article 15 (corporate income tax exemption)",
+        "currentText": "Tax exemptions defined but lack clear implementation pathways; multiple agencies with overlapping jurisdiction create administrative duplication",
+        "proposedAmendment": "Auto-apply CGI Article 15 exemption on issuance of Label Startup; single-window registration eliminates submissions to overlapping agencies.",
+        "pillar": "national",
+        "topic": "tax",
+        "barrierId": "tax-not-auto-applied",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          54
+        ]
+      },
+      {
+        "id": "ci-uemoa-fx",
+        "code": "UEMOA / BCEAO currency controls",
+        "article": "Regulation No. 09/2010/CM/UEMOA",
+        "currentText": "Currency controls restrict foreign transactions; cash-flow challenges for digital banking ventures like Djamo; complex legal adaptations consume 10-15% of investment amounts",
+        "proposedAmendment": "Specialised BCEAO framework for Label-Startup companies: expedited approval, higher transaction limits, simplified documentation for routine intra-group payments and non-resident customer billing.",
+        "pillar": "regional",
+        "topic": "forex",
+        "barrierId": "forex-layering",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          54,
+          60
+        ]
+      },
+      {
+        "id": "ci-passport-sn",
+        "code": "Bilateral mutual-recognition agreement",
+        "article": "Ivory Coast ↔ Senegal (OHADA / UEMOA / ECOWAS pilot)",
+        "currentText": "No mutual recognition with Senegal despite identical regional framework membership and nearly identical qualification criteria",
+        "proposedAmendment": "Bilateral passport mirroring the Senegal recommendation: Label Startup recognised by DER/FJ within 14 days, and vice versa. Pilot for OHADA-wide and ECOWAS-wide rollout.",
+        "pillar": "regional",
+        "topic": "regional",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          54,
+          60
+        ]
+      },
+      {
+        "id": "ci-ecowas-data",
+        "code": "ECOWAS Supplementary Act on Personal Data Protection (2010)",
+        "article": "National implementation provisions",
+        "currentText": "Duplicative compliance obligations across ECOWAS member states; uneven national implementation of the Supplementary Act",
+        "proposedAmendment": "Bring national data-protection rules into full alignment with the ECOWAS Supplementary Act; mutual recognition of data-adequacy determinations across ECOWAS for Label-Startup companies.",
+        "pillar": "regional",
+        "topic": "data",
+        "barrierId": "data-protection-divergence",
+        "paseClauses": [],
+        "priority": "medium",
+        "sourcePages": [
+          60
+        ]
+      }
+    ]
   },
   {
     "country": "Ethiopia",
@@ -112,16 +696,117 @@
     "year": 2025,
     "actName": "Startup Proclamation",
     "ageLimit": 5,
-    "labelingBody": "Ministry of Innovation and Technology",
+    "labelingBody": "National Startup Council (Ministry of Innovation and Technology)",
     "labelName": "Startup designation",
-    "taxHoliday": "Not yet specified in regulations",
+    "taxHoliday": "5 years (corporate income tax)",
     "taxAutoApplied": false,
     "knownGaps": [
       "Proclamation does not authorize SAFEs or convertible notes",
       "Implementation regulations still pending across most articles",
       "Forex regime largely unchanged for labeled startups"
     ],
-    "notable": "Tightest age limit (5 years) of any enacted act; broadest reform opportunity since regulations are still being drafted."
+    "notable": "Tightest age limit (5 years) of any enacted act; broadest reform opportunity since regulations are still being drafted.",
+    "recommendations": [
+      {
+        "id": "et-commercial-code-multiclass",
+        "code": "Ethiopia Commercial Code",
+        "article": "Provisions on PLCs and share companies",
+        "currentText": "Defines PLCs and share companies; multi-class shares and flexible governance are not permitted",
+        "proposedAmendment": "Amend Commercial Code to permit multi-class share structures and single-director governance for Startup-designated companies.",
+        "pillar": "national",
+        "topic": "corporate",
+        "barrierId": "one-share-one-vote",
+        "paseClauses": [
+          "multi-class-shares"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          55
+        ]
+      },
+      {
+        "id": "et-securities-safe",
+        "code": "Ethiopia Securities Proclamation",
+        "article": "Recognised instruments",
+        "currentText": "Only recognises debt and equity instruments; SAFEs, convertible notes, and phantom equity are not authorised even for designated startups",
+        "proposedAmendment": "Amend Securities Proclamation to recognise SAFEs, convertible notes, and phantom equity for Startup-designated companies. Treat as equity-linked for accounting, tax, and prudential purposes.",
+        "pillar": "national",
+        "topic": "securities",
+        "barrierId": "safe-convertible-non-recognition",
+        "paseClauses": [
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          55
+        ]
+      },
+      {
+        "id": "et-labor-esop",
+        "code": "Ethiopia Labor Code + Income Tax Proclamation",
+        "article": "Equity-compensation provisions (absent)",
+        "currentText": "Neither code supports standardised stock-option plans or deferred taxation for equity compensation",
+        "proposedAmendment": "Amend Labor and Income Tax codes to permit ESOPs for Startup-designated companies with taxation deferred to liquidity. Standardised vesting and cliff provisions.",
+        "pillar": "national",
+        "topic": "labor",
+        "barrierId": "no-esop-framework",
+        "paseClauses": [
+          "esop"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          55
+        ]
+      },
+      {
+        "id": "et-nbe-forex",
+        "code": "National Bank of Ethiopia (NBE) Foreign Exchange Directives",
+        "article": "Cross-border payment approval requirements",
+        "currentText": "NBE approval required for most cross-border transactions; investment flows from foreign VCs routed via offshore entities; governance and financing restrictions force dual structures",
+        "proposedAmendment": "Simplified NBE framework for Startup-designated companies: pre-approved transaction categories, expedited approval (under 5 business days) for routine flows, recognition of standard fintech payment processors.",
+        "pillar": "national",
+        "topic": "forex",
+        "barrierId": "forex-layering",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          55
+        ]
+      },
+      {
+        "id": "et-comesa-passport",
+        "code": "Bilateral mutual-recognition agreement",
+        "article": "Ethiopia ↔ Kenya (COMESA / IGAD pilot)",
+        "currentText": "No mutual startup-label recognition across EAC, COMESA, or AU frameworks; distinct local scorecard for label eligibility",
+        "proposedAmendment": "Bilateral pilot with Kenya building on COMESA membership; align Ethiopia Startup-designation criteria with Kenya's Startup Bill scorecard for cross-recognition.",
+        "pillar": "regional",
+        "topic": "regional",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "medium",
+        "sourcePages": [
+          55
+        ]
+      },
+      {
+        "id": "et-implementation-regs",
+        "code": "Startup Proclamation 2025 + Implementing Regulations",
+        "article": "Implementation regulations across most articles",
+        "currentText": "Regulations still pending; broadest reform opportunity precisely because the rules are being written now",
+        "proposedAmendment": "Prioritise implementation regulations enabling: (1) SAFEs/convertibles, (2) multi-class shares, (3) ESOP with tax deferred, (4) auto-applied tax benefits, (5) simplified forex. Sequence drafted with reference to the gaps documented in Tunisia, Senegal, and Nigeria.",
+        "pillar": "national",
+        "topic": "implementation",
+        "barrierId": "agency-fragmentation",
+        "paseClauses": [
+          "multi-class-shares",
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          55
+        ]
+      }
+    ]
   },
   {
     "country": "Algeria",
@@ -140,7 +825,41 @@
       "Foreign exchange controls remain a binding constraint",
       "No public draft of securities provisions"
     ],
-    "notable": "Already operating an Algerian Startup Fund; act would formalise the existing labelling already in use."
+    "notable": "Already operating an Algerian Startup Fund; act would formalise the existing labelling already in use.",
+    "recommendations": [
+      {
+        "id": "dz-forex-carveout",
+        "code": "Algeria Foreign Exchange Code",
+        "article": "Capital-account controls",
+        "currentText": "Outbound forex controls bind even routine intra-group transactions; existing Algerian Startup Fund labelling does not include a forex carve-out",
+        "proposedAmendment": "Draft Startup Act should include explicit forex carve-out for labelled startups: pre-approved transaction categories, expedited approval, recognition of fintech payment processors.",
+        "pillar": "national",
+        "topic": "forex",
+        "barrierId": "forex-layering",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "dz-securities-safe",
+        "code": "Draft Startup Act + Algerian securities framework",
+        "article": "Recognised instruments (to be drafted)",
+        "currentText": "No public draft of securities provisions yet; risk of replicating SAFE-non-recognition gaps from Tunisia, Nigeria, OHADA",
+        "proposedAmendment": "Bake SAFE and convertible-note recognition into the Draft Startup Act before enactment. Reference Tunisia's mistakes as the cautionary case.",
+        "pillar": "national",
+        "topic": "securities",
+        "barrierId": "safe-convertible-non-recognition",
+        "paseClauses": [
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      }
+    ]
   },
   {
     "country": "Kenya",
@@ -149,7 +868,7 @@
     "rec": "EAC / COMESA",
     "status": "in-development",
     "year": null,
-    "actName": "Startup Bill 2022",
+    "actName": "Startup Bill 2022 (awaiting assent)",
     "ageLimit": null,
     "labelingBody": "Kenya National Innovation Agency (KENIA)",
     "labelName": null,
@@ -159,7 +878,74 @@
       "Significant Economic Presence Tax (SEPT) creates cross-border friction with Uganda/Tanzania",
       "No mutual recognition with EAC partners despite Common Market Protocol Articles 13-14"
     ],
-    "notable": "Largest startup ecosystem in EAC; passing this act would unlock EAC-wide passport pilot."
+    "notable": "Largest startup ecosystem in EAC; passing this bill would unlock an EAC-wide passport pilot.",
+    "recommendations": [
+      {
+        "id": "ke-eac-passport",
+        "code": "EAC Common Market Protocol",
+        "article": "Articles 13-14",
+        "currentText": "Theoretically enables establishment rights and service provision across EAC borders; not yet implemented in any national startup framework",
+        "proposedAmendment": "Pilot an EAC startup passport leveraging Articles 13-14: KENIA labelling recognised in Rwanda and Uganda within 14 days. Sector-first: fintech then logistics.",
+        "pillar": "regional",
+        "topic": "regional",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          61,
+          64
+        ]
+      },
+      {
+        "id": "ke-sept-harmonisation",
+        "code": "Significant Economic Presence Tax (Finance Act 2022, amended)",
+        "article": "SEPT scope and rates",
+        "currentText": "Kenyan SEPT creates jurisdictional uncertainty for startups operating cross-border; varying tax obligations across UEMOA and EAC despite regional integration goals",
+        "proposedAmendment": "Harmonise SEPT treatment for EAC-passported startups: single-jurisdiction taxation based on primary place of business; eliminate double taxation for cross-border digital services.",
+        "pillar": "regional",
+        "topic": "tax",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          12
+        ]
+      },
+      {
+        "id": "ke-cma-convertibles",
+        "code": "Capital Markets Authority (Kenya)",
+        "article": "Registration of convertible instruments",
+        "currentText": "CMA has not classified SAFEs; cautious counsel often re-cast the instrument as a convertible loan with zero coupon",
+        "proposedAmendment": "Startup Bill should explicitly recognise SAFEs and convertible notes; CMA to issue implementing guidance for labelled startups.",
+        "pillar": "national",
+        "topic": "securities",
+        "barrierId": "safe-convertible-non-recognition",
+        "paseClauses": [
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "ke-companies-act-multiclass",
+        "code": "Kenya Companies Act 2015",
+        "article": "Provisions permitting classes of shares",
+        "currentText": "Statute permits multi-class shares but practice remains conservative; founders default to one-share-one-vote out of caution",
+        "proposedAmendment": "Codify multi-class share defaults in the Startup Bill for KENIA-labelled startups, with reference articles in the model articles of association.",
+        "pillar": "national",
+        "topic": "corporate",
+        "barrierId": "one-share-one-vote",
+        "paseClauses": [
+          "multi-class-shares"
+        ],
+        "priority": "medium",
+        "sourcePages": [
+          73
+        ]
+      }
+    ]
   },
   {
     "country": "Ghana",
@@ -168,7 +954,7 @@
     "rec": "ECOWAS",
     "status": "in-development",
     "year": null,
-    "actName": "Draft Startup Act",
+    "actName": "Draft Startup Act (final draft submitted, 2025)",
     "ageLimit": null,
     "labelingBody": "TBD",
     "labelName": null,
@@ -178,7 +964,57 @@
       "Securities Industry Act limits convertible instruments",
       "Mandates pension fund 5% allocation to startups by 2026 — outpacing the act itself"
     ],
-    "notable": "Already operates the Ghana–Rwanda Fintech Passport (Feb 2025), Africa's first cross-border mutual recognition system."
+    "notable": "Operates the Ghana–Rwanda Fintech Passport (Feb 2025), Africa's first operational cross-border mutual recognition system.",
+    "recommendations": [
+      {
+        "id": "gh-securities-industry-act",
+        "code": "Securities Industry Act 2016 (Act 929)",
+        "article": "Provisions on convertible instruments",
+        "currentText": "Limits convertible-instrument recognition; pushes founders to issue SAFEs via offshore entities",
+        "proposedAmendment": "Amend the Securities Industry Act to recognise SAFEs and convertible notes for labelled startups. Ghana's strong fintech-passport posture makes it a natural early adopter.",
+        "pillar": "national",
+        "topic": "securities",
+        "barrierId": "safe-convertible-non-recognition",
+        "paseClauses": [
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "gh-pension-5pct",
+        "code": "NPRA (National Pensions Regulatory Authority) Regulations",
+        "article": "Mandatory startup allocation (5% by 2026)",
+        "currentText": "5%-by-2026 mandate is in place but lacks the legal vehicle (the Startup Act has not yet enabled labelled startup funds)",
+        "proposedAmendment": "Pass the Startup Act with a licensed-startup-fund category that pension funds can allocate to. Aligns the existing pension mandate with an actual fund vehicle.",
+        "pillar": "national",
+        "topic": "capital",
+        "barrierId": "pension-fund-restrictions",
+        "paseClauses": [],
+        "priority": "medium",
+        "sourcePages": [
+          11
+        ]
+      },
+      {
+        "id": "gh-passport-extension",
+        "code": "Ghana–Rwanda Fintech Passport (Feb 2025) + ECOWAS expansion",
+        "article": "Bilateral and multilateral extension",
+        "currentText": "Only operational mutual-recognition system in Africa, but limited to fintech and to two countries",
+        "proposedAmendment": "Extend the Ghana–Rwanda model to (1) other sectors (logistics, e-commerce, climate-tech) and (2) other ECOWAS members (Senegal, Nigeria, Ivory Coast). Documented playbook becomes the template for the ECOWAS Startup Regulatory Passport.",
+        "pillar": "regional",
+        "topic": "regional",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          9,
+          73
+        ]
+      }
+    ]
   },
   {
     "country": "Morocco",
@@ -197,7 +1033,56 @@
       "Forex restrictions on outbound capital",
       "No SAFE/convertible-note recognition"
     ],
-    "notable": "Strong fintech and B2B SaaS pipeline; potential anchor for Maghreb passport with Tunisia."
+    "notable": "Strong fintech and B2B SaaS pipeline; potential anchor for a Maghreb passport with Tunisia.",
+    "recommendations": [
+      {
+        "id": "ma-forex-outbound",
+        "code": "Office des Changes regulations",
+        "article": "Outbound capital provisions",
+        "currentText": "Outbound forex restrictions bind even routine intra-group transactions",
+        "proposedAmendment": "Draft Startup Act should include labelled-startup carve-out: pre-approved transaction categories, expedited approval, recognition of fintech payment processors for non-resident customer billing.",
+        "pillar": "national",
+        "topic": "forex",
+        "barrierId": "forex-layering",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "ma-securities-safe",
+        "code": "Draft Startup Act + AMMC (Autorité Marocaine du Marché des Capitaux)",
+        "article": "Recognised instruments",
+        "currentText": "No public draft of securities provisions yet; default frameworks do not recognise SAFEs or convertibles",
+        "proposedAmendment": "Bake explicit SAFE/CN recognition into the Draft Startup Act before enactment. AMMC implementing guidance for labelled startups.",
+        "pillar": "national",
+        "topic": "securities",
+        "barrierId": "safe-convertible-non-recognition",
+        "paseClauses": [
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "ma-passport-tn",
+        "code": "Bilateral mutual-recognition agreement",
+        "article": "Morocco ↔ Tunisia (Maghreb pilot)",
+        "currentText": "No regional recognition framework operational across AMU members despite shared linguistic and regulatory heritage",
+        "proposedAmendment": "Bilateral passport with Tunisia once Morocco's framework activates: pilot for AMU-wide rollout including Algeria and Egypt.",
+        "pillar": "regional",
+        "topic": "regional",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "medium",
+        "sourcePages": [
+          73
+        ]
+      }
+    ]
   },
   {
     "country": "Rwanda",
@@ -206,7 +1091,7 @@
     "rec": "EAC / COMESA",
     "status": "in-development",
     "year": null,
-    "actName": "Draft Startup Law",
+    "actName": "Draft Startup Law (cabinet-approved 2025)",
     "ageLimit": null,
     "labelingBody": "Rwanda Development Board",
     "labelName": null,
@@ -216,7 +1101,57 @@
       "Mature regulatory sandbox not yet linked to a national startup act",
       "Cap table and equity-compensation rules under company law remain rigid"
     ],
-    "notable": "Counterpart to the Ghana–Rwanda Fintech Passport; widely seen as Africa's most agile regulator."
+    "notable": "Counterpart to the Ghana–Rwanda Fintech Passport; widely seen as Africa's most agile regulator.",
+    "recommendations": [
+      {
+        "id": "rw-sandbox-link",
+        "code": "Rwanda Regulatory Sandbox Framework + Draft Startup Law",
+        "article": "Integration provisions",
+        "currentText": "Sandbox is mature and operational, but not yet linked to startup-label benefits in the Draft Startup Law",
+        "proposedAmendment": "Sandbox graduation auto-confers Startup Label; labelled startups receive expedited sandbox entry. Single-window administered by Rwanda Development Board.",
+        "pillar": "national",
+        "topic": "implementation",
+        "barrierId": "agency-fragmentation",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "rw-company-law-multiclass",
+        "code": "Rwanda Company Law (Law N° 17/2018)",
+        "article": "Share-class provisions",
+        "currentText": "Cap-table and equity-compensation rules remain rigid; default rules push founders to Delaware/Mauritius for governance flexibility",
+        "proposedAmendment": "Amend Company Law to permit multi-class shares and ESOPs with tax deferred to liquidity for labelled startups. Reference articles in the Draft Startup Law.",
+        "pillar": "national",
+        "topic": "corporate",
+        "barrierId": "one-share-one-vote",
+        "paseClauses": [
+          "multi-class-shares"
+        ],
+        "priority": "medium",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "rw-eac-passport",
+        "code": "Ghana–Rwanda Fintech Passport extension + EAC pilot",
+        "article": "Bilateral and multilateral extension",
+        "currentText": "Ghana–Rwanda operational only for fintech; EAC Common Market Protocol Articles 13-14 not yet implemented in any national startup framework",
+        "proposedAmendment": "Extend Ghana–Rwanda model to (1) other sectors (logistics, e-commerce, climate-tech) and (2) other EAC members (Kenya, Uganda). Rwanda as the EAC anchor for cross-recognition.",
+        "pillar": "regional",
+        "topic": "regional",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          9,
+          64
+        ]
+      }
+    ]
   },
   {
     "country": "South Africa",
@@ -236,7 +1171,56 @@
       "Exchange control still requires SARB approval for offshore IP",
       "Companies Act allows multi-class shares but practice is conservative"
     ],
-    "notable": "Largest VC market in Africa by absolute deal volume; biggest single-country impact if the bill lands."
+    "notable": "Largest VC market in Africa by absolute deal volume; biggest single-country impact if the bill lands.",
+    "recommendations": [
+      {
+        "id": "za-12j-replacement",
+        "code": "Income Tax Act + replacement for Section 12J",
+        "article": "Venture-investing tax-incentive provisions",
+        "currentText": "Section 12J expired in 2021 with no replacement; institutional capital lacks a tax-efficient route into early-stage venture",
+        "proposedAmendment": "Legislate a Section-12J successor as part of a Startup Act: tax-credit-backed labelled startup fund vehicle. Anchors the campaign that's currently industry-led.",
+        "pillar": "national",
+        "topic": "capital",
+        "barrierId": "pension-fund-restrictions",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "za-sarb-offshore-ip",
+        "code": "South African Reserve Bank (SARB) Exchange Control Regulations",
+        "article": "Offshore IP approval",
+        "currentText": "Requires SARB approval for offshore IP transfers; constrains intra-group IP licensing for startups with international structures",
+        "proposedAmendment": "Streamlined notification (not approval) for labelled-startup intra-group IP licensing. Maintains SARB oversight without the multi-month approval delay.",
+        "pillar": "national",
+        "topic": "forex",
+        "barrierId": "forex-layering",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "za-companies-act-multiclass",
+        "code": "Companies Act 71 of 2008",
+        "article": "Share-class provisions",
+        "currentText": "Statute expressly permits multi-class shares; constraint is practice, not statute. Founders default to conservative cap tables out of habit.",
+        "proposedAmendment": "Startup Act campaign should codify multi-class defaults in the model articles for labelled startups, shifting practice rather than statute.",
+        "pillar": "national",
+        "topic": "corporate",
+        "barrierId": "one-share-one-vote",
+        "paseClauses": [
+          "multi-class-shares"
+        ],
+        "priority": "low",
+        "sourcePages": [
+          73
+        ]
+      }
+    ]
   },
   {
     "country": "Uganda",
@@ -255,7 +1239,41 @@
       "No mechanism to recognise Kenyan startup labelling under the Common Market Protocol",
       "Capital Markets Authority does not register convertible instruments"
     ],
-    "notable": "Could pioneer a Kenya–Uganda EAC passport pilot mirroring the Ghana–Rwanda model."
+    "notable": "Could pioneer a Kenya–Uganda EAC passport pilot mirroring the Ghana–Rwanda model.",
+    "recommendations": [
+      {
+        "id": "ug-eac-passport",
+        "code": "EAC Common Market Protocol",
+        "article": "Articles 13-14",
+        "currentText": "No mechanism to recognise Kenyan startup labelling despite shared CMP membership",
+        "proposedAmendment": "Bilateral Kenya–Uganda passport built into the Draft Startup Bill: KENIA labelling auto-recognised in Uganda. Pilot for EAC-wide rollout (mirrors Ghana–Rwanda for ECOWAS).",
+        "pillar": "regional",
+        "topic": "regional",
+        "barrierId": "no-mutual-recognition",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "ug-cma-convertibles",
+        "code": "Uganda Capital Markets Authority Regulations",
+        "article": "Convertible-instrument registration",
+        "currentText": "CMA does not register convertible instruments; SAFEs and convertible notes operate in a legal gray area",
+        "proposedAmendment": "Draft Startup Bill should explicitly recognise SAFEs and convertible notes; CMA implementing guidance for labelled startups.",
+        "pillar": "national",
+        "topic": "securities",
+        "barrierId": "safe-convertible-non-recognition",
+        "paseClauses": [
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      }
+    ]
   },
   {
     "country": "Egypt",
@@ -264,7 +1282,7 @@
     "rec": "AMU / COMESA",
     "status": "in-development",
     "year": null,
-    "actName": "Draft Startup Act",
+    "actName": "Draft Startup Act (policy-proposal stage)",
     "ageLimit": null,
     "labelingBody": "TBD",
     "labelName": null,
@@ -275,6 +1293,57 @@
       "Forex repatriation rules constrain dollar-denominated revenues",
       "Companies Law caps non-voting shares"
     ],
-    "notable": "Largest North African startup ecosystem by funding; strong fintech and logistics density."
+    "notable": "Largest North African startup ecosystem by funding; strong fintech and logistics density.",
+    "recommendations": [
+      {
+        "id": "eg-fra-safe",
+        "code": "Financial Regulatory Authority (FRA) Regulations",
+        "article": "Recognised instruments",
+        "currentText": "FRA does not recognise SAFEs or convertible notes; pushes founders to issue via Cayman or Delaware parent structures",
+        "proposedAmendment": "Draft Startup Act should explicitly recognise SAFEs and convertible notes; FRA implementing guidance for labelled startups. Treat as equity-linked for prudential reporting.",
+        "pillar": "national",
+        "topic": "securities",
+        "barrierId": "safe-convertible-non-recognition",
+        "paseClauses": [
+          "safe"
+        ],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "eg-forex-repatriation",
+        "code": "Central Bank of Egypt forex regulations",
+        "article": "Repatriation requirements",
+        "currentText": "Forex repatriation rules constrain dollar-denominated revenues from non-resident customers; SaaS billing cycles incompatible with current rules",
+        "proposedAmendment": "Labelled-startup carve-out: quarterly rather than daily/30-day reporting; higher transaction limits; recognition of standard fintech payment processors.",
+        "pillar": "national",
+        "topic": "forex",
+        "barrierId": "forex-layering",
+        "paseClauses": [],
+        "priority": "high",
+        "sourcePages": [
+          73
+        ]
+      },
+      {
+        "id": "eg-companies-law-multiclass",
+        "code": "Egyptian Companies Law",
+        "article": "Provisions on non-voting shares",
+        "currentText": "Caps non-voting shares; blocks multi-class governance structures used by venture-backed startups",
+        "proposedAmendment": "Amend Companies Law to permit multi-class structures (voting, non-voting, preferred) for labelled startups, with disclosure in the articles of association.",
+        "pillar": "national",
+        "topic": "corporate",
+        "barrierId": "one-share-one-vote",
+        "paseClauses": [
+          "multi-class-shares"
+        ],
+        "priority": "medium",
+        "sourcePages": [
+          73
+        ]
+      }
+    ]
   }
 ]

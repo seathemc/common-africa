@@ -1,0 +1,26 @@
+import { AppSidebar } from "@/components/layout/app-sidebar";
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { Separator } from "@/components/ui/separator";
+import Footer from "@/components/footer";
+import { TooltipProvider } from "@/components/ui/tooltip";
+
+export function AppShell({ children }: { children: React.ReactNode }) {
+  return (
+    <TooltipProvider delayDuration={150}>
+      <SidebarProvider>
+        <AppSidebar />
+        <SidebarInset>
+          <header className="sticky top-0 z-30 flex h-12 items-center gap-3 border-b bg-background/80 backdrop-blur px-4">
+            <SidebarTrigger />
+            <Separator orientation="vertical" className="h-4" />
+            <span className="text-xs uppercase tracking-widest text-muted-foreground">
+              Common — the African VC standard. Open source. Free forever.
+            </span>
+          </header>
+          <div>{children}</div>
+          <Footer />
+        </SidebarInset>
+      </SidebarProvider>
+    </TooltipProvider>
+  );
+}
