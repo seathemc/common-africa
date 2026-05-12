@@ -95,11 +95,24 @@ Direct shadcn primitives (`<Input>`, `<Select>`, `<Label>`, `<Textarea>`, `<Butt
 
 The signup form (`/sign`) keeps a hidden honeypot field (`name="website"`) — preserve it.
 
+## Package manager: pnpm (required)
+
+This project uses **pnpm**, pinned via the `packageManager` field in `package.json`. npm has a known bug with cross-platform optional dependencies (lightningcss native binaries break when an npm lockfile is generated on Linux and used on macOS, or vice versa). pnpm handles this correctly.
+
+```bash
+brew install pnpm        # one-time
+pnpm install
+pnpm dev -- -p 3030
+pnpm build
+```
+
+`package-lock.json` is gitignored. `pnpm-lock.yaml` is the canonical lockfile.
+
 ## Build / typecheck
 
 ```bash
-npx tsc --noEmit      # type check
-npx next build        # full build (includes prisma generate)
+pnpm exec tsc --noEmit    # type check
+pnpm build                # full build (includes prisma generate)
 ```
 
 Both must pass before pushing. ESLint config has a pre-existing FlatCompat issue — known, not blocking.

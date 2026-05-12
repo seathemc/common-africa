@@ -8,9 +8,8 @@ out
 next-env.d.ts
 .DS_Store
 
-# Lockfile intentionally not tracked — this repo gets touched from
-# both macOS and Linux sandboxes; cross-platform optional-dependency
-# resolution (lightningcss native binaries) breaks when a Linux-generated
-# lockfile is applied on macOS. Each environment generates its own.
-# Vercel will produce one at build time.
+# We use pnpm (specified via `packageManager` field in package.json).
+# npm lockfiles cause cross-platform optional-dependency resolution bugs
+# with native binaries like lightningcss — keep them out.
 package-lock.json
+yarn.lock
